@@ -1,0 +1,53 @@
+---
+title: "Docs access"
+description: "Let Claude Code read Walrus and Seal documentation"
+---
+
+Want Claude Code to be able to look up Walrus and Seal docs on its own? Set up MCP — it gives Claude Code direct access to documentation.
+
+## What's MCP?
+
+MCP (Model Context Protocol) lets Claude Code fetch information from external sources. Instead of you copy-pasting docs into the conversation, Claude Code can go read them itself. It's like giving it a browser, but only for the sites you approve.
+
+## Setting it up
+
+You need two documentation servers — one for Walrus, one for Seal.
+
+Add this to your Claude Code MCP config. You'll find it at `.claude/mcp_servers.json` in your project directory (create the file if it doesn't exist):
+
+```json
+{
+  "mcpServers": {
+    "walrus-docs": {
+      "command": "npx",
+      "args": ["-y", "@nicholasgriffintn/fetch-mcp@latest"],
+      "env": {
+        "ALLOWED_DOMAINS": "docs.wal.app"
+      }
+    },
+    "seal-docs": {
+      "command": "npx",
+      "args": ["-y", "@nicholasgriffintn/fetch-mcp@latest"],
+      "env": {
+        "ALLOWED_DOMAINS": "seal-docs.wal.app"
+      }
+    }
+  }
+}
+```
+
+Save the file and restart Claude Code. That's it.
+
+## How it works
+
+Now when Claude Code needs to look something up about Walrus or Seal, it can go straight to the source. You can ask things like:
+
+- "How do I store a blob on Walrus?"
+- "What's the Seal encryption flow?"
+- "Show me the Walrus API for site deployment"
+
+And Claude Code will fetch the answer from the official docs instead of guessing.
+
+<Card title="You'll need these links more than you think" icon="link" href="/toolkit/documentation">
+  Sui docs, Move reference, Walrus API, Seal integration guides, ZkLogin deep dives — every official link organized in one place. Bookmark the page. You'll come back to it dozens of times during the build.
+</Card>

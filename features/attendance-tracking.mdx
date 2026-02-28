@@ -1,0 +1,73 @@
+---
+title: "Attendance tracking"
+description: "Proving you were there, on-chain"
+---
+
+Every check-in is recorded on-chain. Not in a spreadsheet. Not in a database that gets deleted after the event. On the blockchain, permanently. Verifiable by anyone, forever.
+
+That might sound like a small thing. But Hitu, think about how attendance works today. The organizer scans badges, dumps the data into a CSV, maybe uploads it to a CRM. A year later, the company shuts down or migrates to a new system and that data is gone. Nobody can prove who was at that event anymore.
+
+On-chain attendance changes the game completely.
+
+## How it works
+
+When an attendee gets their ticket scanned at the venue — whether through a QR code or wallet-based validation — the check-in is recorded as an on-chain transaction on Sui.
+
+That transaction includes:
+
+- **The ticket ID** — which specific ticket was used to check in.
+- **The wallet address** — who checked in (the current holder of the ticket NFT).
+- **The timestamp** — exactly when the check-in happened.
+- **The event ID** — which event this check-in belongs to.
+
+This data isn't stored on someone's server. It's written to the Sui blockchain. It's there permanently. No one can edit it, delete it, or pretend it didn't happen.
+
+## Participation proof
+
+Here's where it gets really interesting. That on-chain check-in record isn't just a log entry. It's proof of participation.
+
+Anyone can look at the blockchain and verify: yes, this wallet address checked into this event at this time. It's not a claim. It's not a self-reported credential. It's a cryptographically verified fact.
+
+Think about what that means:
+
+- **Job applications** — "I attended ETHGlobal 2026" isn't just a line on your resume anymore. It's a verifiable on-chain record that any employer can check.
+- **Community reputation** — active participants in an ecosystem can prove their involvement. Not by saying "trust me, I was there," but by pointing to on-chain evidence.
+- **Eligibility for future events** — organizers can gate access to events based on past attendance. "Only people who attended our last three meetups can get early access to this one." The blockchain makes that trivially easy to check.
+
+This is participation proof that doesn't depend on anyone's word. It's just there, on-chain, forever.
+
+## Verifiable by anyone, anytime
+
+Let me hammer this point home because it's important. The attendance record isn't locked behind anyone's login. It's not in a private database that only the organizer can access. It's on a public blockchain.
+
+Anyone — the attendee, the organizer, a future employer, a partner project, another event platform — can verify attendance. They just look at the chain. No API keys needed. No partnership agreements. No "please send us the attendance data." It's all right there.
+
+This is what open data looks like. The attendance records are composable. Other apps and platforms can build on top of them without needing permission from anyone. A reputation protocol could aggregate your attendance across dozens of events. A job platform could verify your conference history. A community tool could rank members by participation.
+
+The data is open. The possibilities are endless.
+
+## No reliance on anyone's infrastructure
+
+This is the part that really matters for the long term. Traditional attendance data has a shelf life. It lasts as long as the organizer's systems last. Companies shut down. Databases get corrupted. Systems get migrated and old data falls through the cracks.
+
+On-chain attendance records don't have that problem. Sui is a decentralized network. It doesn't depend on any single company staying in business. The data persists as long as the blockchain exists.
+
+You attended an event in 2026? You'll be able to prove it in 2036. Or 2046. The record is there. Nobody needs to maintain it. Nobody needs to keep the lights on for it. It just exists on-chain, permanently.
+
+That's a fundamentally different approach to record-keeping. And for something like event attendance — where the value of the proof often matters more *after* the event than during it — permanence is everything.
+
+## For organizers
+
+On the organizer side, on-chain attendance tracking gives you perfect data without any of the usual headaches.
+
+No more reconciling badge scan counts with registration lists. No more "we think about 200 people showed up but we're not sure." The blockchain gives you an exact, tamper-proof count of who checked in, when, and with which ticket.
+
+That data is available in real time during the event and permanently after it. Use it for post-event analytics. Use it for follow-up campaigns. Use it for proving attendance numbers to sponsors. It's all there, and it's all verifiable.
+
+<Note>
+**RFP requirement:** "Attendance tracking and participation proof on-chain."
+</Note>
+
+<Card title="Proof is on the chain. But what lands in your wallet?" icon="arrow-right" href="/features/attendance-nfts">
+  The blockchain recorded that you showed up. But you're also about to receive something — a badge that can't be bought, can't be faked, and can't be transferred. And it's the key to everything that happens next.
+</Card>

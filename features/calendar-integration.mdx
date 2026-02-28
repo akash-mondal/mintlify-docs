@@ -1,0 +1,62 @@
+---
+title: "Calendar integration"
+description: "Add to Calendar, ICS files, and never forget an event"
+---
+
+It's a small thing but it matters: after registration, the user gets an "Add to Calendar" button. An ICS file drops the event into their Google Calendar or Apple Calendar. They'll never forget the date.
+
+This isn't a flashy blockchain feature. It's a basic UX expectation. And we nail it.
+
+## How it works
+
+Right after a user registers for an event and their ticket is minted, they see a confirmation screen. On that screen — along with their ticket details and a success message — there's an "Add to Calendar" button.
+
+One click. The event shows up in their calendar. Done.
+
+## ICS file generation
+
+Behind the scenes, the platform generates an ICS file for every event. ICS is the universal calendar format. It works with:
+
+- **Google Calendar** — the file opens and creates an event
+- **Apple Calendar** — same thing, works natively on Mac and iPhone
+- **Outlook** — Microsoft's calendar supports ICS too
+- **Any calendar app** — if it's a calendar, it reads ICS files
+
+The ICS file contains everything the user needs:
+
+- Event title
+- Date and time (with timezone)
+- Location or virtual link
+- A brief description
+
+It's generated from the same event metadata stored on Walrus. One source of truth for everything — the event page, the ticket, and the calendar entry all pull from the same data.
+
+## Where the button appears
+
+The "Add to Calendar" option shows up in a few places:
+
+- **The confirmation screen** — right after registration, when the user is most likely to want it
+- **The ticket view** — if the user comes back to look at their ticket later, the option is still there
+- **Confirmation messages** — any confirmation the user receives can include the calendar link
+
+The goal is to make it impossible to miss. If someone registered for your event, they should have every opportunity to add it to their calendar.
+
+## Reminders
+
+Once the event is in the user's calendar, their calendar app handles reminders. Google Calendar will ping them before the event. Apple Calendar will do the same. The user's existing reminder system takes over.
+
+We don't need to build a custom reminder system. We just need to get the event into the user's calendar. Their phone does the rest.
+
+## Why this matters
+
+No-shows are the biggest problem in event management. People register, forget, and don't show up. Calendar integration is the simplest, most effective way to reduce no-shows. It costs almost nothing to implement and it makes a real difference in attendance rates.
+
+It's also a signal that this platform pays attention to the details. Blockchain features are exciting. But the basics — like getting an event onto someone's calendar — are what make people actually use the product.
+
+<Note>
+**RFP requirement:** "Upon successful registration, users receive a verifiable confirmation, confirmation includes an optional ICS calendar file ('Add to Calendar')."
+</Note>
+
+<Card title="What if you DON'T want everyone in?" icon="arrow-right" href="/features/approval-flows">
+  Open events are easy. But exclusive events — the 50-person dinners, the invite-only workshops — need a gatekeeper. And the gatekeeper needs to control who gets a ticket before it ever mints.
+</Card>

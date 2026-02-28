@@ -1,0 +1,129 @@
+---
+title: "What's broken"
+description: "Seven problems with event ticketing that you're going to fix"
+---
+
+![Seven things broken about event ticketing today](/images/seven-problems.png)
+
+Hitu, before we build anything, I need you to really sit with how bad the current system is. Not in a theoretical way. In a "this personally pisses me off" way.
+
+Because if you don't feel the problem in your gut, you'll build something that's just marginally better. And marginally better isn't worth our time.
+
+I'm going to give you seven problems. Count them. Because by the time we get to the features section, you're going to see how your platform fixes every. single. one.
+
+Here are seven things that are fundamentally broken about how events work today.
+
+---
+
+## 1. You don't own your ticket
+
+Think about the last concert ticket you bought. You paid real money for it. It's "yours," right?
+
+Wrong. It lives on Ticketmaster's servers. Or Eventbrite's. Or BookMyShow's. They can revoke it. They can deactivate it. They can change the terms after you bought it. You don't have a ticket -- you have *permission* to attend, and that permission can be taken away at any time.
+
+What do you actually hold? A screenshot of a QR code. That's it. Try selling it, gifting it, or even proving you own it without going through the platform that issued it. You can't.
+
+That's not ownership. That's a rental agreement where the landlord can change the locks whenever they feel like it.
+
+## 2. Your data isn't yours
+
+Every time you register for an event, you hand over your name, email, phone number, and payment info. That data doesn't just sit there quietly. It gets used for marketing you never consented to. It gets shared with "partners." It gets sold.
+
+And then it gets breached.
+
+<Warning>
+Ticketing platforms are massive honeypots for hackers. Millions of users, all with payment info attached, all in one centralized database. When (not if) they get breached, your data is out there forever.
+</Warning>
+
+You shouldn't have to give up your identity just to attend a meetup. But right now, there's no alternative. The system assumes that buying a ticket means surrendering your personal information to a corporation. That's the deal. Take it or leave it.
+
+## 3. Middlemen everywhere
+
+Let's trace the money on a simple $50 event ticket:
+
+- The event organizer sets the price at $50
+- The ticketing platform takes its cut (Eventbrite charges up to 9.95% + $1.59 per ticket)
+- The payment processor takes another 2-3%
+- If it's a resale, the resale platform takes another 10-25%
+
+By the time everyone's had their slice, the organizer might see $40 out of your $50. And you paid $55+ after "service fees" and "processing charges."
+
+Every single one of these middlemen adds friction, adds delay, and adds cost. They don't make the event better. They don't make your experience better. They just... exist. Between you and the thing you want to do.
+
+<Note>
+This isn't about hating companies for making money. It's about questioning whether we need five intermediaries to do something as simple as "person pays to attend event."
+</Note>
+
+<Warning>
+And the scale of this is staggering. The FTC alleges that Ticketmaster charged [$16.4 BILLION in hidden fees](https://www.ftc.gov/news-events/news/press-releases/2025/09/ftc-sues-live-nation-ticketmaster-engaging-illegal-ticket-resale-tactics-deceiving-artists-consumers) between 2019 and 2024. Sixteen point four BILLION. With markups hidden until the final checkout screen — sometimes adding up to 44% on top of the listed price. That's not a service fee, Hitu. That's a shakedown.
+</Warning>
+
+## 4. No proof you were there
+
+You went to three conferences last year. You volunteered at a community hackathon. You attended every single meetup in a series.
+
+Cool. Prove it.
+
+You can't. There's no verifiable record. Maybe you have some email confirmations buried in your inbox. Maybe a badge photo on LinkedIn. But there's nothing *composable* -- nothing that other systems can read, verify, or build on.
+
+Your attendance history doesn't connect to your professional reputation. It doesn't unlock perks at future events. It doesn't prove your expertise in a community. It just... disappears. Every event you attend is a dead end.
+
+## 5. Fraud is absolutely rampant
+
+This one should make you angry.
+
+<Warning>
+In 2024, Lloyds Bank reported that Taylor Swift ticket scams alone cost over **£1 million** -- from just one bank's customers. Over 600 victims from a single financial institution, for a single artist's tour. [Read the full story in The Guardian.](https://www.theguardian.com/music/2024/apr/17/taylor-swift-fans-warning-as-ticket-scams-lloyds-bank-fraud)
+</Warning>
+
+Fake tickets. Duplicate QR codes. Scalping bots that buy out entire events in seconds and resell at 10x the price. Counterfeit confirmation emails. It's a billion-dollar problem globally, and it's getting worse.
+
+The root cause is embarrassingly simple: there's no way to verify a ticket's authenticity without trusting the platform that issued it. And if someone can forge a convincing-looking PDF or screenshot, there's no way for a buyer to tell the difference until they're standing at the gate being turned away.
+
+As [Making a Scene covered in their breakdown of blockchain ticketing](https://www.makingascene.org/decentralized-touring-how-blockchain-ticketing-stops-scalpers-and-builds-fan-loyalty/), the technology to solve this already exists. Cryptographic proof of authenticity, on-chain ownership records, programmable transfer rules -- all of it is ready. The industry just hasn't caught up yet.
+
+And here's the kicker — internal FTC documents reveal that Ticketmaster actually AVOIDED using effective bot prevention because it was "too effective" and would reduce their revenue. Read that again. They had the tools to stop bots. They chose not to use them. They chose more money over protecting fans. Let that sink in. The platform you're trusting to keep the sale fair is actively choosing not to.
+
+## 6. Organizers are locked in
+
+If you're running events, your situation is arguably worse.
+
+You built an audience on Eventbrite. Hundreds, maybe thousands of attendees. Their emails, their purchase history, their engagement data. But that audience doesn't belong to you. It belongs to Eventbrite.
+
+Want to switch to Luma? Start from zero. Want to try a different platform? Leave your community behind. Want to export your attendee list and own your own relationships? Good luck navigating their data export limitations.
+
+This is vendor lock-in, and it's by design. Every platform wants to be the one you can't leave. Your community becomes their leverage.
+
+<Note>
+Organizers should own their relationship with their audience. Full stop. No platform should hold your community hostage as a retention strategy.
+</Note>
+
+## 7. Events are islands
+
+Here's maybe the most subtle problem, but it's the one that matters most for what we're building.
+
+Everything is siloed.
+
+Your conference attendance doesn't connect to your meetup history. Your meetup history doesn't connect to your hackathon wins. Your hackathon wins don't connect to your open source contributions. None of it talks to each other.
+
+Every event platform is its own little island. There's no shared identity. No composable reputation. No way for one system to know what you've done in another.
+
+Imagine if your entire event history -- every conference, every workshop, every community gathering -- lived in a single, portable, verifiable profile that *you* controlled. Imagine if organizers could see that you're a returning community member without you having to fill out another Google Form. Imagine if your attendance at beginner workshops automatically unlocked access to advanced ones.
+
+That's composability. And right now, it doesn't exist.
+
+---
+
+## So what do we do about it?
+
+Every one of these problems has the same root cause: centralized platforms own the data, own the tickets, own the relationships, and own the rules.
+
+The fix isn't to build a better centralized platform. It's to remove the need for one.
+
+Now imagine if someone rebuilt this from scratch, with ownership, privacy, and composability at the core.
+
+That someone is you.
+
+<Card title="See what you're going to build instead" icon="arrow-right" href="/vision/the-future">
+  Seven problems. You just counted them all. Now I'm going to show you what it looks like when someone builds the fix — and that someone is you.
+</Card>

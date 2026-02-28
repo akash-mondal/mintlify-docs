@@ -1,0 +1,60 @@
+---
+title: "How it all fits together"
+description: "The mental model — how Walrus, Sui, Seal, and ZkLogin connect"
+---
+
+![The building blocks — Sui, Walrus, Seal, ZkLogin, Move](/images/ecosystem-map.png)
+
+## Think of your platform like a building
+
+Before we get into any technology, I want you to picture a building. A real, physical building.
+
+Every building has the same basic parts. There's a foundation that holds everything up. There are storage rooms where you keep things. There are locks on the doors so only the right people get in. And there's a front entrance where people walk in.
+
+Your decentralized event platform works the same way.
+
+- **Sui** is the foundation. It's the brain that processes everything — every ticket purchase, every event creation, every transfer. Nothing happens without Sui.
+- **Walrus** is the storage rooms. It's where all your files and data live — cover images, event descriptions, encrypted ticket data. Everything that needs to be saved goes here.
+- **Seal** is the locks. It decides who can access what. Only the ticket holder can see the venue address. Only the organizer can update the event. Seal enforces those rules with encryption.
+- **ZkLogin** is the front door. It's how people walk in without needing a special key. They sign in with Google, and they're inside. No wallet setup, no seed phrases, no confusion.
+
+## How they connect
+
+Here's the simplest way to think about the flow:
+
+```
+A person arrives
+        |
+        v
+   [ ZkLogin ]  ---- "Sign in with Google" ---- creates a Sui address
+        |
+        v
+   [   Sui    ]  ---- the brain ---- processes transactions, owns objects
+        |
+        v
+   [  Walrus  ]  ---- the storage ---- holds files, images, encrypted data
+        |
+        v
+   [   Seal   ]  ---- the locks ---- encrypts/decrypts based on on-chain rules
+```
+
+That's it. Person walks in through ZkLogin. Sui handles the logic. Walrus stores the data. Seal protects it.
+
+## Each piece gets its own page
+
+Each of these technologies is powerful on its own, and they each have their own deep-dive page in this guide. I'll explain what they do, why they matter, and how they fit into your event platform.
+
+Here's the order I'd suggest reading them:
+
+1. **Walrus** — the storage layer
+2. **Walrus Sites** — websites hosted on Walrus
+3. **Sui** — the blockchain itself
+4. **Move** — the smart contract language
+5. **Seal** — the encryption layer
+6. **ZkLogin** — the authentication layer
+
+Don't try to understand everything at once. Read each page, let it sit. It'll click. Some of this stuff took me a while too. The key is to build the mental model first — the details fill in naturally after that.
+
+<Card title="Your data needs a home that nobody can evict it from" icon="database" href="/ecosystem/walrus">
+  Walrus stores your event data across hundreds of nodes worldwide. But here's the wild part — even if two-thirds of those nodes vanish, your data survives. How? That's the first thing I want to show you.
+</Card>

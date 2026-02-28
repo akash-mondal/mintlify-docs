@@ -1,0 +1,54 @@
+---
+title: "Claude Code"
+description: "Your AI development partner — setup and tips"
+---
+
+![Your AI development partner — describe it, watch it build, ship it](/images/claude-code-hero.png)
+
+Claude Code is the reason you can do this as a solo builder. It's an AI coding assistant that lives in your terminal and can write, test, and debug code alongside you. No IDE plugins, no browser tabs — just you and your terminal.
+
+## What it does
+
+- **Writes code** — from Move smart contracts to React components
+- **Reads your files** — understands your project structure and existing code
+- **Runs commands** — executes builds, tests, deployments right from the conversation
+- **Understands context** — remembers what you've told it and what it's seen in your codebase
+- **Learns from your code** — the more it reads, the better its suggestions get
+
+## Installation
+
+First, make sure you have Node.js installed. Then:
+
+```bash
+npm install -g @anthropic-ai/claude-code
+```
+
+That's it. Now navigate to your project directory and run:
+
+```bash
+claude
+```
+
+Claude Code will start up, scan your project, and you're ready to go.
+
+## Tips for working with Claude Code
+
+**Be specific in your requests.** Instead of "write a smart contract," say:
+
+> "Write a Move smart contract for event creation with fields: title, date, venue, capacity"
+
+The more detail you give, the better the output.
+
+**Let it read your existing code first.** Before asking it to write something new, let it look at what you already have. It'll match your patterns, your naming conventions, your style.
+
+**Use it for debugging.** Paste the error message, paste the relevant code, and let it figure it out. Nine times out of ten, it'll nail the fix on the first try.
+
+**It's great at refactoring.** Got messy code that works but looks terrible? Ask Claude Code to clean it up. It'll restructure without breaking functionality.
+
+**Ask it to explain things.** Don't understand a piece of Move code? A Sui concept? Just ask. It'll break it down in plain language.
+
+Think of it as pair programming with someone who's read every documentation page you haven't.
+
+<Card title="Claude Code is good. With three installs, it becomes a Sui expert." icon="puzzle-piece" href="/toolkit/plugins">
+  Out of the box, Claude Code doesn't know Move from JavaScript. But there are three plugins that teach it everything — Sui patterns, Move best practices, and production-grade frontend design. One command each. The difference is night and day.
+</Card>

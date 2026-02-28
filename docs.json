@@ -1,68 +1,165 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Mint Starter Kit",
+  "theme": "maple",
+  "name": "Build Guide — Event Registration on Walrus",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
+    "primary": "#0D9373",
+    "light": "#18E299",
     "dark": "#15803D"
   },
   "favicon": "/favicon.svg",
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Start here",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "The opportunity",
             "pages": [
               "index",
-              "quickstart",
-              "development"
+              "vision/events-today",
+              "vision/whats-broken",
+              "vision/the-future",
+              "vision/why-you",
+              "vision/bigger-picture"
             ]
           },
           {
-            "group": "Customization",
+            "group": "The RFP",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
-          },
-          {
-            "group": "Writing content",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "vision/rfp-program",
+              "vision/evaluation",
+              "vision/deliverables"
             ]
           }
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "What you're building",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "The platform overview",
             "pages": [
-              "api-reference/introduction"
+              "features/the-big-picture",
+              "features/for-organizers",
+              "features/for-attendees",
+              "features/for-the-ecosystem"
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "Event creation & registration",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "features/creating-events",
+              "features/zklogin-onboarding",
+              "features/registration-flow",
+              "features/tickets-and-pricing",
+              "features/calendar-integration",
+              "features/approval-flows"
+            ]
+          },
+          {
+            "group": "NFT ticketing",
+            "pages": [
+              "features/nft-tickets",
+              "features/encrypted-tickets",
+              "features/dynamic-tickets",
+              "features/ticket-ownership"
+            ]
+          },
+          {
+            "group": "Event day",
+            "pages": [
+              "features/event-access",
+              "features/qr-validation",
+              "features/attendance-tracking",
+              "features/attendance-nfts"
+            ]
+          },
+          {
+            "group": "After the event",
+            "pages": [
+              "features/proof-of-attendance",
+              "features/communication",
+              "features/post-event-data",
+              "features/data-ownership"
+            ]
+          },
+          {
+            "group": "Extended features",
+            "pages": [
+              "features/lead-capture",
+              "features/multi-track",
+              "features/badge-printing",
+              "features/integrations"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "The ecosystem",
+        "groups": [
+          {
+            "group": "How it all fits",
+            "pages": [
+              "ecosystem/the-big-picture"
+            ]
+          },
+          {
+            "group": "The building blocks",
+            "pages": [
+              "ecosystem/walrus",
+              "ecosystem/walrus-sites",
+              "ecosystem/sui",
+              "ecosystem/move",
+              "ecosystem/seal",
+              "ecosystem/zklogin"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Design it",
+        "groups": [
+          {
+            "group": "It's all yours",
+            "pages": [
+              "design/your-canvas",
+              "design/the-landscape",
+              "design/mobbin"
+            ]
+          },
+          {
+            "group": "What you're designing",
+            "pages": [
+              "design/the-screens",
+              "design/the-feels"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Your toolkit",
+        "groups": [
+          {
+            "group": "Setup",
+            "pages": [
+              "toolkit/claude-code",
+              "toolkit/plugins",
+              "toolkit/docs-access"
+            ]
+          },
+          {
+            "group": "References",
+            "pages": [
+              "toolkit/documentation",
+              "toolkit/examples",
+              "toolkit/community"
+            ]
+          },
+          {
+            "group": "The plan",
+            "pages": [
+              "toolkit/how-to-build"
             ]
           }
         ]
@@ -71,14 +168,19 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
+          "anchor": "Walrus Docs",
+          "href": "https://docs.wal.app",
           "icon": "book-open-cover"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "Sui Docs",
+          "href": "https://docs.sui.io",
+          "icon": "book"
+        },
+        {
+          "anchor": "Walrus RFP",
+          "href": "https://rfp.walrus.site",
+          "icon": "file-lines"
         }
       ]
     }
@@ -90,33 +192,28 @@
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "Walrus RFP",
+        "href": "https://rfp.walrus.site"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Apply to RFP",
+      "href": "https://rfp.walrus.site"
     }
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+      "copy",
+      "view",
+      "claude",
+      "cursor"
+    ]
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "x": "https://x.com/WalrusProtocol",
+      "github": "https://github.com/MystenLabs"
     }
   }
 }

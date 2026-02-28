@@ -1,0 +1,69 @@
+---
+title: "Tickets and pricing"
+description: "Flexible ticket tiers, pricing, capacity, and discounts"
+---
+
+Not all tickets are the same. General admission. VIP with backstage access. Early bird discounts. Group rates. Your platform needs to handle all of it — and each ticket tier can have different perks, different encrypted content, different access levels.
+
+Let's break down how this works.
+
+## Flexible ticket tiers
+
+Every event can have multiple ticket tiers. Each tier is its own thing with its own rules. Here's what you can configure for each one:
+
+- **Price** — set it to zero for free events, or charge in SUI, USDC, or other supported tokens
+- **Capacity** — limit the number of tickets available per tier. When it's full, it's full.
+- **Visibility** — make a tier public, hidden (accessible only via direct link), or invite-only
+- **Tier name and description** — "General Admission," "VIP," "Speaker Pass," whatever makes sense for your event
+
+So you could have an event with 500 general admission tickets at $10, 50 VIP tickets at $50, and 20 speaker passes that are free and hidden from the public listing. All in the same event. All managed from one dashboard.
+
+## Discount codes and promotional pricing
+
+Organizers need flexibility on pricing. Here's what the platform supports:
+
+- **Discount codes** — create codes that reduce the ticket price by a percentage or a flat amount. Share them with sponsors, partners, early supporters, or whoever you want.
+- **Early bird pricing** — set a lower price that automatically increases after a certain date or after a certain number of tickets are sold.
+- **Promotional pricing** — run limited-time offers, bundle deals, or any custom pricing strategy.
+
+Discount codes are validated at checkout. The user enters their code, the price updates, and they pay the discounted amount. Simple.
+
+## Payment integrations
+
+The platform handles payments on-chain. When an attendee pays for a ticket:
+
+- The payment goes directly from the attendee's address to the organizer's address
+- No middleman holds the funds
+- The transaction is recorded on Sui — transparent and verifiable
+- Supported tokens include SUI, USDC, and other tokens the organizer chooses to accept
+
+This is peer-to-peer payment. The platform facilitates it but doesn't custody the funds. That's a big deal — it means organizers get their money immediately, not after some 14-day payout cycle.
+
+## Tiers and Seal: different access for different tickets
+
+Here's where it gets interesting. Each ticket tier doesn't just get you into the event — it can unlock different encrypted content through Seal.
+
+Seal is the encryption layer on Sui. It lets you gate content based on what someone owns. So if you hold a VIP ticket, you might get access to:
+
+- The backstage meeting link
+- The speaker slide decks
+- An exclusive Discord channel invite
+- Post-event recordings
+
+General admission holders might get access to the event stream and nothing else. The content is encrypted on Walrus and only decryptable by the right ticket holders. The access rules are defined on-chain — no admin panel, no manual permission management. You hold the right ticket, you get the content. You don't, you don't.
+
+This ties directly into how we use Seal for access control across the platform. Different tier, different key, different content.
+
+## Why this matters
+
+Ticket flexibility is table stakes for any event platform. But combining flexible tiers with on-chain access control through Seal is something centralized platforms can't do. They can give you a VIP badge. We can give you cryptographically enforced access to exclusive content that only VIP holders can decrypt.
+
+That's not a gimmick. That's a fundamentally better model.
+
+<Note>
+**RFP requirement:** "Flexible ticket parameters (price, capacity, visibility, etc.)" and "Payment integrations and discount code management."
+</Note>
+
+<Card title="The tiny feature that kills no-shows" icon="arrow-right" href="/features/calendar-integration">
+  Organizers lose thousands to people who register and forget. There's one dead-simple feature that cuts no-shows dramatically — and it takes about an afternoon to build.
+</Card>

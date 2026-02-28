@@ -1,0 +1,89 @@
+---
+title: "ZkLogin"
+description: "Sign in with Google, get a blockchain address"
+---
+
+## The magic door — you swipe your Google badge and the blockchain recognizes you
+
+Imagine walking into a building. The old way: you get handed a special keycard with a 24-word code written on it. If you lose the keycard, you can never get back in. If someone photographs the code, they can get in whenever they want. You have to guard this keycard with your life.
+
+The new way: you just swipe your regular Google badge — the one you already carry everywhere — and the door opens. No special keycard. No 24-word code. Just the identity you already have.
+
+That's ZkLogin.
+
+## The problem it solves
+
+Let's be honest. Crypto wallets are a terrible user experience.
+
+You download a wallet app. It generates a "seed phrase" — 12 or 24 random words that you have to write down and store somewhere safe. If you lose those words, you lose everything. Forever. No recovery, no customer support, no reset button.
+
+Then you have to understand gas fees, transaction signing, network switching. It's a mess. And it's the number one reason normal people don't use blockchain apps.
+
+Your event platform can't have any of that. Your attendees are regular people who want to buy a ticket to a concert. They're not going to install MetaMask and write down a seed phrase. They'll just leave.
+
+## ZkLogin's solution
+
+ZkLogin lets users sign in with an OAuth provider they already use — Google, Facebook, Apple — and automatically derives a Sui blockchain address from that login. No wallet. No seed phrase. No confusion.
+
+Here's how it works, step by step:
+
+1. **User clicks "Sign in with Google"** — just like any other app.
+2. **Google confirms their identity** — the standard OAuth flow you've seen a million times.
+3. **A zero-knowledge proof is generated** — this is the magic. It proves the user authenticated with Google WITHOUT revealing their Google identity to the blockchain.
+4. **A Sui address is derived from this proof** — the user now has a blockchain address, tied to their Google account, but private.
+5. **User can now transact on Sui** — buy tickets, transfer NFTs, access encrypted content. All without ever knowing they're using a blockchain.
+
+## The "zero-knowledge" part
+
+The name sounds intimidating, but the concept is straightforward. A zero-knowledge proof lets you prove something is true without revealing the underlying information.
+
+Think of it this way: you want to prove you're over 21 to get into a bar. Normally, you show your ID — which reveals your name, address, date of birth, and more. A zero-knowledge proof would be like a stamp on your hand that proves "this person is over 21" without revealing anything else about you.
+
+With ZkLogin, the blockchain knows "this person authenticated with a valid Google account" without knowing WHICH Google account. Nobody — not Google, not the app, not anyone on the blockchain — can connect the Google account to the Sui address.
+
+## Supported providers
+
+ZkLogin works with:
+
+- **Google**
+- **Facebook**
+- **Apple**
+- **Twitch**
+- **Kakao**
+- **Slack**
+
+Your users pick whichever one they're most comfortable with. For most people, that'll be Google.
+
+## Go deeper
+
+<Info>
+  For the full technical deep dive on how ZkLogin works under the hood, read the [zkLogin Deep Dive](https://blog.sui.io/zklogin-deep-dive/) on the official Sui blog. You can also check out the [official Sui zkLogin feature page](https://www.sui.io/zklogin) for a high-level overview of what it enables.
+</Info>
+
+If you want to see ZkLogin in action with a working demo, Shinami built a great example:
+[zkLogin Game Demo — High Level Guide](https://docs.shinami.com/docs/zklogin-game-demo-high-level-guide)
+
+If you want to see the code behind a completely gasless experience — where the app pays all transaction fees for the user — [watch this tutorial on Sui Enoki + zkLogin + Sponsored Transactions](https://www.youtube.com/watch?v=YwRQnTOks4s). It shows how to build the "invisible Web3" experience. That's the gold standard for what we're going for.
+
+## Your platform's secret weapon
+
+This is your platform's secret weapon. Your attendees will never know they're using a blockchain. They just sign in with Google and everything works. They buy a ticket, it shows up in their account, they show up to the event and scan in. Behind the scenes, an NFT was minted on Sui, encrypted data was stored on Walrus, access was controlled by Seal — but the user saw none of that. They just had a smooth, familiar experience.
+
+That's the entire point. The technology should be invisible. ZkLogin makes it invisible.
+
+---
+
+That's the full technology stack. You now have a mental model for every layer:
+
+- **Walrus** stores the data
+- **Walrus Sites** hosts the websites
+- **Sui** processes the transactions
+- **Move** defines the rules
+- **Seal** encrypts the secrets
+- **ZkLogin** lets people in
+
+Now let's talk about making it look incredible.
+
+<Card title="You know the tech. Now make it beautiful." icon="palette" href="/design/your-canvas">
+  The entire stack is in your head now — storage, logic, encryption, auth. None of it matters if people land on your platform and feel nothing. The next section is all yours: the name, the colors, the vibe. Nobody's going to hand you a template. You're the designer.
+</Card>

@@ -1,0 +1,63 @@
+---
+title: "Move"
+description: "A language designed to make digital assets safe"
+---
+
+## A programming language that makes it impossible to accidentally lose digital assets
+
+Most programming languages don't care what you're building. You can write a to-do app or a banking system with the same tools. That flexibility is great — until you're dealing with real money and real assets.
+
+Solidity, the language used on Ethereum, is powerful. But it made it too easy to write code that loses people's money. Millions of dollars have been lost to bugs that shouldn't have been possible. Reentrancy attacks, integer overflows, accidental token burns — the horror stories are endless.
+
+Move was designed specifically so those kinds of mistakes can't happen. It's a programming language built from the ground up for digital assets.
+
+## What Move actually is
+
+Move is the smart contract language used on Sui. When someone writes the logic for your event platform — how tickets are created, how they're transferred, how access is granted — they write it in Move.
+
+It was originally developed at Meta (Facebook) for their Diem blockchain project. When that project ended, the engineers brought Move to Sui and made it even better.
+
+## Key concepts — very simplified
+
+You don't need to memorize any of this. But having a rough idea of these three concepts will help you understand conversations about your platform's smart contracts.
+
+### Structs
+
+A struct is a blueprint for an object. It defines what something looks like — what fields it has.
+
+Think of it like a form. A ticket struct might have fields for: event name, date, seat number, price, and owner. An event struct might have fields for: title, description, venue, date, capacity, and organizer.
+
+When someone creates a new ticket on your platform, they're filling out that form and creating an object from it.
+
+### Abilities
+
+This is the clever part. In Move, every struct has **abilities** — rules that define what you can do with it.
+
+There are four abilities:
+
+- **copy** — can this object be duplicated?
+- **drop** — can this object be destroyed (thrown away)?
+- **store** — can this object be saved inside another object?
+- **key** — can this object exist as a standalone thing on the blockchain?
+
+A ticket probably has `key` and `store` but NOT `copy`. Because you don't want people duplicating their tickets. That rule is enforced at the language level. A developer can't accidentally make tickets copyable — they have to explicitly give that ability.
+
+### Modules
+
+A module is just a package of related code. Your platform might have:
+
+- An **event module** — logic for creating, updating, and managing events
+- A **ticket module** — logic for minting, transferring, and verifying tickets
+- An **access module** — logic for controlling who can do what
+
+Modules keep things organized and let different parts of your platform be developed and updated independently.
+
+## You don't need to learn Move
+
+Here's the honest truth: you don't need to learn Move. Claude Code with the Sui Stack plugin writes Move for you. It understands the language, the patterns, and the best practices. You describe what you want in plain English, and it generates the smart contract code.
+
+But knowing what Move IS helps you understand what's possible. When someone says "we can make tickets non-transferable," you'll know that's an abilities thing. When someone says "let's add a new field to the event struct," you'll know what they mean. You'll be able to have the conversation even if you're not writing the code.
+
+<Card title="Your ticket has a secret. Who gets to read it?" icon="lock" href="/ecosystem/seal">
+  You've seen how objects are defined and protected in Move. But the venue address, the QR code, the VIP details — that data needs to be invisible to everyone except the ticket holder. There's a protocol that splits the encryption key across ten servers so no single one can peek. Not even you.
+</Card>

@@ -1,0 +1,118 @@
+---
+title: "The screens"
+description: "Every screen your platform needs"
+---
+
+Here's every screen and flow your platform needs, organized by who's using it. This isn't a design spec — I'm not going to tell you what any of these should look like. That's your job. This is just the map. The "what," not the "how."
+
+Think of this as a checklist. When you're done designing, every item on this list should have a screen (or a state within a screen) that covers it.
+
+## Attendee screens
+
+These are the screens your attendees interact with. This is where first impressions happen. This is where someone goes from "I've never heard of this" to "I have a ticket in my wallet." Get this flow right and everything else follows.
+
+<Steps>
+  <Step title="Landing / discovery">
+    The front door. Where people browse events, search, filter, and find something they want to attend. This page sells the entire platform — it needs to feel alive, not empty.
+  </Step>
+  <Step title="Event detail">
+    A single event page with everything an attendee needs to decide: what, when, where, who's organizing, what tickets are available, what's included. This is the conversion page. Someone is here because they're interested — your job is to get them to "yes."
+  </Step>
+  <Step title="Registration form">
+    Enter information, select a ticket tier, confirm details. This should feel fast and frictionless. Every extra field you add is a reason for someone to abandon.
+  </Step>
+  <Step title="Payment">
+    The checkout flow. Price, fees (hopefully none), payment method, confirmation. This is the highest-trust moment — people are handing over money. It needs to feel solid and secure.
+  </Step>
+  <Step title="Ticket view">
+    The owned ticket. QR code, event details, maybe some encrypted info only the holder can see. This is the thing people pull up on event day. It needs to work fast and look unmistakable.
+  </Step>
+  <Step title="Event site (Walrus Site)">
+    Token-gated content hosted on decentralized storage. Only ticket holders can access it. Could contain venue details, schedules, exclusive materials — whatever the organizer puts there.
+  </Step>
+  <Step title="Check-in success">
+    The "you're in!" moment. When the QR scan succeeds and the attendee is confirmed. This should feel like a celebration, not a transaction.
+  </Step>
+  <Step title="Attendance badge">
+    The proof-of-attendance NFT. A permanent record that this person was at this event. How it's displayed, how it feels to receive it, how it lives in their profile over time.
+  </Step>
+  <Step title="Profile / history">
+    All events attended, all tickets owned, all badges collected. The attendee's home base. Their event identity, built up over time.
+  </Step>
+</Steps>
+
+## Organizer screens
+
+These are the screens for people running events. Organizers are power users — they need control, clarity, and efficiency. The attendee side is about delight. The organizer side is about confidence.
+
+<Steps>
+  <Step title="Event creation wizard">
+    Step-by-step event setup. Title, description, images, dates, location, categories. This should guide the organizer through the process without feeling rigid. Flexibility matters — not every event is the same.
+  </Step>
+  <Step title="Ticket tier setup">
+    Define pricing tiers, capacity limits, early bird windows, perks per tier. Organizers need to see clearly what they're offering and at what price. Mistakes here cost real money.
+  </Step>
+  <Step title="Publish / preview">
+    Review everything before going live. What does the attendee-facing page look like? Are the details right? Is the pricing correct? One last sanity check before it's real.
+  </Step>
+  <Step title="Attendee management">
+    The list of who's registered. Search, filter, sort. See check-in status. Contact attendees. Export data. This is the organizer's command center during the event lifecycle.
+  </Step>
+  <Step title="Check-in scanner">
+    The scanning interface for event day. Point the camera at a QR code, confirm the attendee, move on. This needs to be FAST. When there's a line of 200 people at the door, every second counts.
+  </Step>
+  <Step title="Dashboard / analytics">
+    Real-time event data. Tickets sold, revenue, check-in rate, attendance over time. The organizer should be able to glance at this and know exactly how their event is performing.
+  </Step>
+  <Step title="Post-event reports">
+    After the event: final attendance numbers, revenue breakdown, attendee demographics, engagement data. Exportable. This is how organizers learn and improve for next time.
+  </Step>
+  <Step title="Settings">
+    Account preferences, notification settings, team management, API keys. The boring stuff that needs to work but doesn't need to be flashy.
+  </Step>
+</Steps>
+
+## System screens
+
+These aren't tied to a specific user type — they're the connective tissue of the entire platform. They're easy to forget and incredibly important to get right.
+
+<Steps>
+  <Step title="Auth / login (ZkLogin)">
+    Sign in with Google via ZkLogin. The user should never see the word "blockchain," never be asked for a wallet, never encounter a seed phrase. It should feel like logging into any normal app.
+  </Step>
+  <Step title="Error states">
+    When things go wrong. Transaction failed. Network error. Invalid ticket. Something expired. These moments define trust. A good error state tells the user what happened and what to do next. A bad one just says "Something went wrong."
+  </Step>
+  <Step title="Loading states">
+    Blockchain transactions take a moment. What does the user see while the chain confirms? This is an opportunity for personality, not just a spinner. More on this in the next section.
+  </Step>
+  <Step title="Empty states">
+    No events yet. No tickets yet. No attendees registered. Zero is a number your users will see, especially early on. Empty states should feel inviting, not lonely. "No events yet" can be an invitation, not a dead end.
+  </Step>
+  <Step title="Notifications">
+    Alerts, updates, reminders. Event starting soon. New registration. Ticket transfer received. Check-in confirmed. These keep users connected to the platform between active sessions.
+  </Step>
+</Steps>
+
+---
+
+## Don't panic
+
+That's a lot of screens. I know.
+
+Here's the thing — you don't design them all at once. Don't even try. Start with the **attendee flow**. That's where the magic happens. Get the journey from "I found an event" to "I have a ticket with a QR code" feeling absolutely perfect. Make that flow so smooth that someone could do it with one hand on a crowded subway.
+
+Once that core flow sings, expand outward. Add the organizer screens. Then the system screens. Then go back and polish.
+
+<Tip>
+Prioritize the attendee registration-to-ticket flow first. That's the sequence someone experiences in their first 60 seconds on your platform. If those 60 seconds feel good, they'll stick around for everything else.
+</Tip>
+
+<Card
+  title="The details that make people fall in love"
+  icon="arrow-right"
+  href="/design/the-feels"
+  horizontal
+>
+  Micro-interactions, transitions, and the moments that separate good from great.
+</Card>

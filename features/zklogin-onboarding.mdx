@@ -1,0 +1,67 @@
+---
+title: "Sign in with Google"
+description: "ZkLogin — how users onboard without ever seeing a wallet"
+---
+
+![One click — Google verifies you, math proves it, Sui gives you an address](/images/zklogin-magic.png)
+
+Here's the magic trick: your attendees sign up with their Google account. That's it. Behind the scenes, a zero-knowledge proof links their Google identity to a Sui address — but nobody, not even Google, can make that connection. Your attendees don't need to know what a blockchain is. They just click "Sign in with Google" and they're in.
+
+No seed phrases. No browser extensions. No "please install MetaMask." Just a button they already know how to use.
+
+## The biggest barrier in crypto
+
+Let's be honest. The reason most people haven't used a blockchain app isn't because blockchain is bad. It's because the onboarding is terrible. Download a wallet. Write down 12 words. Don't lose those words or your money is gone forever. Fund the wallet. Approve a transaction. Pay gas fees.
+
+Nobody's doing that to register for a meetup.
+
+ZkLogin kills this entire problem. It takes the familiar "Sign in with Google" flow that billions of people already use and connects it to a Sui blockchain address behind the scenes. The user never sees the blockchain. They never need to.
+
+## How it feels
+
+Exactly like signing into any normal app. You click "Sign in with Google." A popup appears. You pick your Google account. You're in. That's the whole experience.
+
+If you've ever used Luma, you know the vibe. Quick, clean, no friction. That's what we're going for — except everything is running on Sui under the hood.
+
+## What happens behind the scenes
+
+Here's the simplified version of what's actually going on:
+
+1. **Google verifies identity.** The user signs in with Google, and Google issues a token that says "yes, this is really this person."
+
+2. **A math proof gets generated.** A zero-knowledge proof is created that links that Google token to a Sui address. The key part: this proof proves the link exists without revealing the user's Google identity to the blockchain. Nobody looking at the chain can figure out which Google account is behind which address.
+
+3. **A Sui address is derived.** The user now has a blockchain address. They didn't create it manually. It was derived from their Google identity through cryptographic magic.
+
+4. **Transactions happen without a wallet.** When the user registers for an event, the transaction is signed using this derived address. No wallet popup. No gas fee confusion. It just works.
+
+That's ZkLogin in a nutshell. Google verifies who you are. Math proves it without revealing it. Sui gives you an address. You transact without knowing any of this happened.
+
+## Supported providers
+
+ZkLogin isn't limited to Google. Sui supports multiple OAuth providers:
+
+- **Google** — the primary one we'll use
+- **Facebook** — for users who prefer it
+- **Apple** — great for iOS-first audiences
+- **Twitch** — perfect for gaming and streaming events
+- **Kakao** — important for Korean market reach
+- **Slack** — useful for professional and developer events
+
+Each provider works the same way. The user signs in with whatever account they prefer, and ZkLogin handles the rest.
+
+## Why this is a competitive advantage
+
+Think about what this means for event organizers. You get all the benefits of blockchain — permanent tickets, verifiable attendance, decentralized data — without asking your attendees to learn anything new.
+
+Your event platform feels like Luma. It runs on Sui. Your attendees never know the difference, and they don't need to. That's the whole point.
+
+Every other blockchain event platform asks users to connect a wallet. We don't. That's the edge.
+
+<Note>
+**RFP requirement:** "ZkLogin support for easy user onboarding."
+</Note>
+
+<Card title="They're signed in. Now what?" icon="arrow-right" href="/features/registration-flow">
+  The user clicked one button and they're in. But the next three seconds — picking a ticket, paying, and receiving something they actually own — that's where the invisible blockchain magic kicks in.
+</Card>

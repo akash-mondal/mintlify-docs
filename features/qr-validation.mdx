@@ -1,0 +1,67 @@
+---
+title: "QR validation"
+description: "QR codes, scanning, and entry verification"
+---
+
+![One second — scan, verify, confirmed on-chain](/images/qr-scan-moment.png)
+
+Event day. The attendee opens their ticket, shows the QR code. The organizer scans it. In that moment, the blockchain verifies: yes, this is a real ticket, yes, this person owns it, yes, they haven't already checked in. Green light. They're in.
+
+That whole process takes a second. Maybe two. But behind that scan, a lot is happening. Let me break it down.
+
+## QR code generation
+
+The QR code on your ticket isn't just some random string. It's generated from encrypted ticket data — the same data that's locked with Seal encryption.
+
+When you open your ticket in your wallet, the app decrypts your ticket details (because you're the rightful owner) and generates a QR code from that data. The QR contains enough information to verify your ticket's authenticity and your ownership, but it doesn't expose your private data to anyone who happens to glance at your screen.
+
+The important thing here: the QR code is tied to your specific ticket NFT. You can't screenshot someone else's QR and use it. You can't photoshop one. The data inside the QR is cryptographically linked to the on-chain ticket, and that link is what gets verified at scan time.
+
+## What happens at scan time
+
+This is where it gets good. The organizer (or their staff) has a scanning device — could be a phone, a tablet, whatever. They scan your QR code. Here's what happens in that split second:
+
+1. **The scanner reads the QR data** — it pulls out the ticket identifier and the ownership proof.
+2. **It checks the blockchain** — is this ticket ID real? Was it minted by the official event contract? Is it still valid?
+3. **It verifies ownership** — does the person presenting this QR actually hold this ticket NFT in their wallet right now?
+4. **It checks attendance status** — has this ticket already been used to check in? If so, reject it. No double entries.
+5. **Green light or red light** — everything checks out? You're in. Something's off? Denied.
+
+All of that happens on-chain. It's not checking against some database the organizer set up. It's checking against the Sui blockchain itself. The source of truth is the chain, not a spreadsheet.
+
+## Wallet-based validation
+
+QR codes aren't the only option. Some events might prefer wallet-based validation instead.
+
+With this approach, the attendee doesn't show a QR code at all. Instead, they connect their wallet at the venue — could be tapping their phone, scanning a wallet address, or using a dApp at the entrance. The system checks their wallet for a valid ticket NFT and lets them through.
+
+Same verification logic, different interface. The blockchain check is identical — it's just triggered by a wallet connection instead of a QR scan.
+
+Some organizers might use both. QR for speed at the main entrance, wallet-based for VIP areas or secondary checkpoints. The flexibility is there.
+
+## Why this kills fraud
+
+Think about the fraud problem in traditional ticketing. Fake tickets are everywhere. People buy tickets on resale sites and half of them are duplicates. Someone screenshots a QR code and shares it with five friends. The first person through the door gets in, and the other four are stuck outside arguing with security.
+
+With on-chain verification, all of that disappears.
+
+- **Fake tickets?** The scanner checks if the ticket was minted by the official contract. If it wasn't, it's fake. Rejected instantly.
+- **Duplicate QR codes?** The first scan marks the ticket as "checked in" on-chain. The second person who tries to use the same QR gets a red light. The blockchain already recorded the first check-in.
+- **Stolen tickets?** If the ticket was transferred out of the original buyer's wallet, the QR tied to the old owner won't work. Only the current holder can generate a valid QR.
+- **Counterfeit tickets?** You can't counterfeit an NFT. The provenance goes all the way back to the organizer's verified contract. It's either real or it's not. No gray area.
+
+This isn't just an improvement over traditional ticketing. It's a completely different security model. The blockchain is the bouncer, and it doesn't make mistakes.
+
+## The speed question
+
+You might be wondering — doesn't checking the blockchain take time? Won't there be a line out the door while each scan waits for on-chain verification?
+
+Sui is fast. We're talking sub-second finality. The scan, the on-chain check, the response — it all happens faster than a traditional barcode scanner hitting a cloud database. Attendees won't even notice the difference. Tap, scan, green light, walk in.
+
+<Note>
+**RFP requirement:** "QR or wallet-based validation for entry" and "At the venue, ticket NFTs can be scanned for validation and attendance tracking."
+</Note>
+
+<Card title="The scan took one second. But what it recorded lasts forever." icon="arrow-right" href="/features/attendance-tracking">
+  That green light at the door? It didn't just let someone in. It wrote a permanent, tamper-proof record to the blockchain — and that record changes everything about what "attending an event" means.
+</Card>

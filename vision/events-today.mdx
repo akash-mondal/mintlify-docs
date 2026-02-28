@@ -1,0 +1,96 @@
+---
+title: "How events work today"
+description: "The world of event ticketing — and why it's ripe for disruption"
+---
+
+![The broken state of event ticketing — 14 million people, one platform, total collapse](/images/events-broken.png)
+
+Let me tell you a story about 14 million people having the worst day of their lives. Simultaneously.
+
+## The day Ticketmaster broke
+
+November 2022. Taylor Swift announces the Eras Tour. 14 million fans flood Ticketmaster to buy tickets. The system doesn't just slow down — it **collapses**. Complete meltdown. People waited in queues for hours only to get kicked out. Tickets vanished from carts. Error screens everywhere. The presale was such a disaster that [the US Senate literally held hearings about it](https://en.wikipedia.org/wiki/Taylor_Swift%E2%80%93Ticketmaster_controversy). Senators. Grilling a ticketing CEO. On national television. Over concert tickets.
+
+But here's the part that really stings. In the chaos, scammers went to work. Fake tickets flooded resale sites. Fans who couldn't get tickets through the official sale — which was most of them — turned to secondary markets out of desperation. Thousands of people paid hundreds, sometimes thousands of dollars for tickets that didn't exist. Just PDFs that looked right. Just screenshots of confirmation pages. Just lies.
+
+<Warning>
+This isn't ancient history. This happened two years ago to one of the biggest artists on the planet, on the biggest ticketing platform in the world. If THEY can't get it right, what hope does a local tech conference have?
+</Warning>
+
+And if you think this is just an American problem — [Lloyds Bank reported that Taylor Swift fans in the UK lost over 1 million pounds to ticket scams](https://www.theguardian.com/music/2024/apr/17/taylor-swift-fans-warning-as-ticket-scams-lloyds-bank-fraud). That's 600+ victims from ONE bank. One bank, Hitu. Imagine the real number.
+
+Think about this for a second, Hitu. Have YOU ever been to an event and thought "I wish I had proof I was here"? Or paid a fee and wondered where that money actually goes? Or tried to transfer a ticket to a friend and couldn't because the platform wouldn't let you? These aren't edge cases. They're the normal experience.
+
+And it got worse. In 2025, hackers stole over 900 Eras Tour tickets and [resold them for $635,000](https://en.wikipedia.org/wiki/Taylor_Swift%E2%80%93Ticketmaster_controversy). The centralized system is STILL getting exploited years later. This isn't a one-time failure — it's a structural one.
+
+## Okay but normal events are fine, right?
+
+Let's walk through what "normal" looks like. You want to go to a tech conference. You Google it, land on Eventbrite. Fill in your name, email, credit card. They charge you $50 plus $3.59 in fees. You get a confirmation email with a PDF. On event day you show the PDF, someone scans it, you get a lanyard, you walk in.
+
+That's it. Your relationship with the event ends the moment you leave the venue.
+
+Think about that. You attended an incredible conference. Met amazing people. Saw talks that changed how you think about your career. And what do you have to show for it? Nothing. No proof. No credential. No connection to anyone you met. Just a memory and maybe some business cards you'll never follow up on.
+
+## What's really happening behind the scenes
+
+### For you, the attendee
+
+When you bought that ticket, here's what actually happened:
+
+- Your name, email, phone number, and payment info got stored on their servers
+- They can sell that data to sponsors, partners, or whoever they want (read the fine print sometime — it's terrifying)
+- Your "ticket" is just a row in their database. They can delete it, modify it, or revoke it whenever they want
+- You have zero proof you attended after the event
+- If the platform shuts down, your ticket history disappears
+- You don't own anything. Not the ticket. Not your data. Not even the memory in any verifiable way
+
+You're basically renting access to a database row. That's the deal.
+
+### For the organizer
+
+If you're running the event, it's somehow even worse:
+
+- Eventbrite takes **3.5% + $1.59 per ticket**. On a $50 ticket, that's $3.34. On 1,000 tickets, you just lost $3,340. For what? A form and an email
+- They hold your money for days before releasing it. YOUR money, from YOUR event, from YOUR audience — sitting in THEIR bank account earning THEM interest
+- They own the attendee relationship. Those people came to YOUR event, but the follow-up emails, the data, the engagement metrics? That's Eventbrite's leverage over you
+- Analytics are limited to what they decide to show you
+- Want to switch platforms next year? Good luck migrating your attendee list. You're locked in
+
+And here's the thing nobody talks about — the incentives are completely backward. Ticketmaster doesn't make money by making YOUR experience good. They make money by being the only option. They've locked up exclusive deals with venues so you literally can't buy tickets elsewhere even if you wanted to.
+
+<Info>
+[CBC literally went undercover at a scalper conference](https://www.youtube.com/watch?v=N-HCqL38WdY). What they found? Ticketmaster was HELPING scalpers. Training them. Giving them tools. The company that's supposed to protect fans from scalpers was running a secret program to enable them. You can't make this up.
+</Info>
+
+And it's not just journalists noticing. In May 2024, the US Department of Justice — along with 40 states — [sued to break up Live Nation-Ticketmaster](https://www.justice.gov/archives/opa/pr/justice-department-sues-live-nation-ticketmaster-monopolizing-markets-across-live-concert) for monopolizing the live concert industry. The DOJ. Forty states. This isn't some crypto Twitter complaint — this is federal enforcement. The people whose literal job is to protect markets from monopolies looked at Ticketmaster and said "yeah, this needs to end."
+
+## The numbers behind the mess
+
+Let's zoom out for a second.
+
+<Note>
+Event ticketing is a **$70+ billion industry** globally. It's dominated by a handful of companies. And it's running on infrastructure that was designed in the early 2000s. We've reinvented how we do banking, shopping, communication, dating, food delivery — but somehow buying a ticket to a concert still works the same way it did when people were using flip phones.
+</Note>
+
+The entire system is built on trust — trust that the platform won't crash, trust that the ticket is real, trust that your data is safe, trust that the pricing is fair. And that trust gets broken constantly. Every single week there's a new story about fake tickets, crashed systems, hidden fees, or data breaches.
+
+It's a $70 billion industry held together by PDFs and prayers.
+
+If you want the full saga, [People Magazine put together a timeline of the entire Ticketmaster fiasco](https://people.com/music/taylor-swift-eras-tour-ticketmaster-timeline/). It reads like a thriller. Seriously, bookmark it — it's useful context for understanding why what we're building actually matters.
+
+## So... what if it didn't have to be this way?
+
+What if your ticket was something you actually owned — not a database row someone else controls? What if it couldn't be faked, couldn't be duplicated, couldn't just vanish? What if attending an event gave you a permanent, verifiable credential that YOU control? What if organizers got paid instantly, kept their data, and didn't have to hand over a cut to a middleman who adds no real value?
+
+What if none of this had to work this way?
+
+Keep reading. I'm about to show you exactly what's broken — and then what you're going to build instead.
+
+<Card
+  title="Let's break down what's actually broken"
+  icon="arrow-right"
+  href="/vision/whats-broken"
+  horizontal
+>
+  I haven't shown you the worst part yet — seven specific problems that make this whole system fundamentally unfixable without rebuilding from scratch.
+</Card>

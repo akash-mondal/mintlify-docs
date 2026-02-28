@@ -1,0 +1,50 @@
+---
+title: "Walrus Sites"
+description: "Websites that nobody can take down"
+---
+
+## GitHub Pages, but decentralized
+
+You've probably used GitHub Pages before, or at least seen a site hosted on it. You push some HTML and CSS to a repo, and boom — you've got a live website. It's easy, it's free, and it works.
+
+But GitHub is a company. They can take your site down. Your domain registrar can seize your domain. Your hosting provider can pull the plug. There are a lot of single points of failure.
+
+Walrus Sites takes that same idea — simple, static websites — and puts them on Walrus storage. No single server. No domain registrar. No hosting company with an off switch.
+
+## What Walrus Sites actually are
+
+A Walrus Site is a static website whose files are stored as blobs on Walrus. Your HTML, CSS, JavaScript, images — all of it lives on the decentralized storage network. When someone visits your site, the files are fetched from Walrus nodes and assembled in the browser.
+
+That's it. It's a website. It just happens to be hosted on infrastructure that nobody controls.
+
+## Nobody can take them down
+
+This is the key point. A traditional website has a chain of dependencies — a server, a hosting provider, a domain registrar, maybe a CDN. Any link in that chain can fail or be forced to shut you down.
+
+A Walrus Site has none of that. The files are distributed across storage nodes worldwide. There's no single server to shut down. There's no hosting company to pressure. The site just... exists.
+
+## Why this matters for your event platform
+
+Think about the lifecycle of an event:
+
+- **Before the event:** You need an event page where people can learn about it and get tickets.
+- **During the event:** You might need a ticket verification page, a live schedule, access links.
+- **After the event:** You want an archive — photos, recordings, a record that the event happened.
+
+All of these can be Walrus Sites. They're permanent, they're resilient, and they're tied to the same infrastructure as everything else in your platform.
+
+## Token-gated Walrus Sites
+
+Here's where it gets really interesting. You can create Walrus Sites that are **token-gated** — meaning only people who hold a specific NFT (like your event ticket) can access the content.
+
+Imagine this: you buy a ticket to an event. That ticket is an NFT on Sui. The event's website — with the venue address, the schedule, the access links — is a Walrus Site that only ticket holders can view. No ticket, no access. It's enforced by the technology, not by a bouncer checking a list.
+
+## Everything is connected
+
+Your event's website lives on the same infrastructure as the tickets. The ticket data is stored on Walrus. The ticket ownership is tracked on Sui. The access control is handled by Seal. The website is a Walrus Site. Everything is connected. Everything reinforces everything else.
+
+That's the beauty of building on this stack. It's not a bunch of unrelated tools duct-taped together. It's a coherent system where each piece is designed to work with the others.
+
+<Card title="Storage is solved. But who's running the logic?" icon="bolt" href="/ecosystem/sui">
+  Walrus handles where things live. But something needs to process every ticket purchase, every transfer, every access check — in under a second. There's a blockchain that handles hundreds of transactions simultaneously, and it was built by the engineers who tried to do this at Facebook first.
+</Card>

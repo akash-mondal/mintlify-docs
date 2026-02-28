@@ -1,0 +1,99 @@
+---
+title: "Everything you'll submit and build"
+description: "The proposal deliverables and the project deliverables — all decoded"
+---
+
+Hitu, there are two separate sets of deliverables here, and it's important not to confuse them. The first is what you submit to *get accepted*. The second is what you *build* once you're in.
+
+Let's break both down.
+
+---
+
+## The proposal — what gets you accepted
+
+This is your application. It's what the review committee reads to decide whether to fund you. Every piece matters, and each one serves a specific purpose.
+
+<Steps>
+  <Step title="Technical design document">
+    This is the core of your proposal. It explains *what* you're building and *how*. Not marketing fluff — actual technical decisions. What frameworks you'll use, how the smart contracts work, how data flows between the frontend and the blockchain, how you'll handle encryption with Seal. Think of it as the document that convinces a technical reviewer you've actually thought this through, not just skimmed the RFP and said "yeah I can do that."
+  </Step>
+
+  <Step title="Architecture diagram">
+    A visual map of how all the pieces fit together. Frontend, smart contracts, Walrus storage, Seal encryption, Sui blockchain, ZkLogin — show how they connect. This doesn't need to be beautiful. It needs to be clear. A well-labeled diagram tells reviewers more about your understanding than three pages of text.
+  </Step>
+
+  <Step title="Milestone timeline">
+    Week by week or month by month — what you'll deliver and when. Be realistic. Pad your estimates. If you think something takes one week, say two. Reviewers have seen a thousand proposals that promise everything in month one and deliver nothing. A conservative, credible timeline beats an ambitious fairy tale every time.
+  </Step>
+
+  <Step title="Team description">
+    This is where you describe your setup. You're a solo builder working with Claude Code as your AI development partner. Don't be shy about this — frame it honestly. Describe the tooling: Claude Code with the Sui Stack plugin for Move smart contracts, access to Walrus and Sui documentation, a structured development guide (this one). You're not pretending to be a five-person team. You're showing that you have a modern, AI-accelerated development workflow that lets you move fast and ship quality work.
+  </Step>
+
+  <Step title="Budget breakdown">
+    How you'll use the funding. Be specific. Infrastructure costs, any design tools or services, your time. Keep it honest and reasonable. Reviewers can smell inflated budgets from a mile away.
+  </Step>
+
+  <Step title="Prior work or relevant experience">
+    Anything you've built before. GitHub repos, projects, even learning exercises. If you've done Claude Code projects, mention them. If you've worked with web apps, APIs, or databases — relevant. The bar isn't "have you built a decentralized app before." The bar is "can you build things and ship them."
+  </Step>
+</Steps>
+
+---
+
+## The project — what you build once accepted
+
+This is the actual product. These are the deliverables from the RFP itself — the things the Walrus Foundation expects to see when you're done. Let me decode each one for you.
+
+**1. Technical design and architecture document**
+
+Blueprint before construction. This is an expanded version of what you submitted in your proposal, updated as you build and learn. It's a living document that captures your architecture decisions, trade-offs, and the reasoning behind them. You'll update it as you go — your initial design WILL change once you start building, and that's expected.
+
+**2. Smart contracts for event registration, ticketing, and attendance**
+
+The Move code on Sui that handles all the logic. Creating events, issuing tickets as NFTs, managing registrations, recording attendance — all of this lives in smart contracts. This is the backbone of the entire platform. Everything else is a frontend to these contracts.
+
+**3. Frontend dApp — organizer and attendee views**
+
+A web app with two perspectives. Organizers need to create events, manage registrations, scan tickets, and view analytics. Attendees need to browse events, register, view their tickets, and check in. Same platform, different experiences depending on who you are.
+
+**4. Integration with Walrus and Seal for ticket encryption**
+
+Connecting to Walrus for storage and Seal for encryption. Event metadata, images, and site content get stored on Walrus — decentralized, censorship-resistant, always available. Ticket details get encrypted with Seal so only the ticket holder can see sensitive information like venue addresses, personal QR codes, and access links.
+
+**5. Deployment on Walrus Sites**
+
+Your app hosted on Walrus itself. Decentralized hosting. Not Vercel, not AWS, not Netlify — Walrus Sites. The platform that helps people run decentralized events is itself decentralized. That's not just philosophically consistent, it's a powerful statement about what the technology can do.
+
+**6. NFT minting and attendance verification flows**
+
+The complete ticket-to-attendance journey. Someone registers, they get an NFT ticket. They show up, their attendance is verified on-chain. After the event, they get a proof-of-attendance NFT. The full lifecycle — issuance, validation, verification — all working end to end.
+
+**7. Open-source repository**
+
+All your code, public on GitHub. Smart contracts, frontend, deployment scripts, documentation — everything open source. This isn't optional. The foundation wants this to be a reference implementation that other developers can learn from and build on. Your code becomes part of the ecosystem's shared knowledge.
+
+**8. GTM strategy**
+
+Go-to-market: how people discover and start using your platform. This isn't "we'll post on Twitter." It's a real plan. Who are your first users? How do you onboard the first 10 event organizers? What communities will you target? How do you get from "cool demo" to "platform people actually depend on"? The foundation is investing in something they want to see used, not just built.
+
+---
+
+## How they connect
+
+Notice the pattern? Your proposal is a *plan* for these deliverables. Your project is the *execution* of that plan. The proposal says "here's what I'll build and how." The project says "here it is, working."
+
+The stronger your proposal, the smoother your build. Everything you invest in thinking through the architecture, timeline, and approach up front saves you debugging time, rework, and confusion later.
+
+---
+
+That's the full picture. Now let's zoom into what you're actually building — feature by feature.
+
+<Card
+  title="The platform, feature by feature"
+  icon="arrow-right"
+  href="/features/the-big-picture"
+  horizontal
+>
+  Every feature explained like we're sitting across from each other at a coffee shop.
+</Card>

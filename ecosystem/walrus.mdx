@@ -1,0 +1,76 @@
+---
+title: "Walrus"
+description: "Your decentralized hard drive — storage that nobody owns"
+---
+
+![Google Drive but nobody owns it — your data split and scattered globally](/images/walrus-storage.png)
+
+## Google Drive, but nobody owns it
+
+You know how Google Drive works. You upload a file, it goes to Google's servers, and you can access it from anywhere. Simple. But here's the thing — Google owns those servers. They can read your files. They can delete your files. They can shut down the service. You're trusting one company with everything.
+
+Walrus is what happens when you take that idea and remove the single company from the equation.
+
+## What Walrus actually does
+
+Walrus is a decentralized storage network. When you upload data to Walrus, it doesn't go to one server. It gets spread across many nodes around the world. No single node has your complete file. No single entity controls the network.
+
+The data you upload is called a **blob**. That's just the technical term for any chunk of data — an image, a text file, an encrypted ticket, whatever. You upload a blob, and Walrus gives you back a blob ID. That's your receipt. You use that ID to retrieve your data later.
+
+## Erasure coding — the clever part
+
+This is the part that blew my mind when I first learned about it.
+
+Imagine tearing a photo into 100 pieces and spreading them across 100 different safes around the world. To reconstruct the photo, you only need any 34 of the 100 pieces. That's erasure coding. Even if 66 safes get destroyed, your photo survives.
+
+That's not a simplification — that's genuinely how it works. Walrus uses erasure coding to split your data into fragments, spread them across storage nodes, and only needs a fraction of those fragments to reconstruct the original. It's ridiculously resilient.
+
+## The WAL token
+
+Walrus has its own token called WAL. You use it to pay for storage. Want to store your event's cover image for a year? Pay a small amount of WAL. The token is what keeps the storage nodes incentivized to actually store your data.
+
+## Why this matters for your event platform
+
+Think about everything an event platform needs to store:
+
+- **Cover images** for events
+- **Event descriptions** and metadata
+- **Encrypted ticket data** (QR codes, venue addresses, access links)
+- **Post-event content** (recordings, photos, memories)
+
+All of this lives on Walrus. Not on your server. Not on AWS. Not on any company's infrastructure. It's distributed across the network, resilient to failure, and nobody can take it down.
+
+## Serious backing
+
+This isn't some side project. Walrus raised $140M from a16z, Standard Crypto, and Franklin Templeton. These are some of the biggest names in venture capital and traditional finance. They're betting big on decentralized storage being the future.
+
+<Info>
+  For a detailed breakdown of the funding and what it means for the decentralized storage landscape, check out [this BlockEden analysis](https://blockeden.xyz/blog/2026/01/10/walrus-protocol-sui-decentralized-storage-wars/).
+</Info>
+
+## Watch this 11-minute overview
+
+Full Value Dan does a solid job breaking down what Walrus is and why it matters. If you're more of a visual learner, start here.
+
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/-1HYVz0C4i8"
+  title="Walrus Overview by Full Value Dan"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+/>
+
+## The bigger vision
+
+For the full vision, [watch the Basecamp 2025 keynote: "Decentralize the Whole Stack"](https://www.youtube.com/watch?v=uP2FG9OG3UA) — 24 minutes that'll change how you think about storage. Seriously, if you only watch one thing about Walrus, make it this one.
+
+## Go deeper
+
+- [Walrus official site](https://www.walrus.xyz) — explore the protocol, docs, and ecosystem
+- [Walrus: Redefining Decentralized Storage for Web3 on Sui](https://suipiens.com/blog/walrus-redefining-decentralized-storage-for-web3-on-sui/) — a great community article that goes into more technical detail
+
+<Card title="What if your entire website couldn't be taken offline?" icon="globe" href="/ecosystem/walrus-sites">
+  You just learned how Walrus stores data. Now imagine hosting an entire website on that same infrastructure — no server, no hosting company, no off switch. Your event pages, living forever. It's already real.
+</Card>

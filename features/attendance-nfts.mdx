@@ -1,0 +1,79 @@
+---
+title: "Attendance NFTs"
+description: "Soulbound attendance NFTs — proof of presence"
+---
+
+![Proof you were there — permanent, verifiable, composable](/images/attendance-badge.png)
+
+After the event, every attendee gets an Attendance NFT. Think of it like a badge — proof that you were there. It can be soulbound (non-transferable) so nobody can fake it. And it opens doors: future airdrops, exclusive access, reputation in the ecosystem.
+
+This is one of those features that sounds simple but has massive implications. Let me walk you through it.
+
+## What's an Attendance NFT
+
+When you check in at an event — QR scan, wallet validation, whatever the method — an Attendance NFT gets minted to your wallet. It's a separate token from your ticket. Your ticket got you in. The Attendance NFT proves you actually showed up.
+
+Think of it like collecting stamps in a passport. Each event you attend adds another NFT to your wallet. Over time, your collection tells a story: the conferences you went to, the meetups you hit, the hackathons you survived. It's your on-chain event history.
+
+Each Attendance NFT can be unique to the event. The organizer can design a custom visual — a badge, an illustration, a commemorative graphic. Some events might go minimal. Others might commission artists to create something collectible. It's up to them. The point is, every event can have its own distinct badge that attendees actually want to hold onto.
+
+## The soulbound option
+
+Okay, this is an important concept. Soulbound means non-transferable. Once the NFT is minted to your wallet, it stays there. You can't send it to someone else. You can't sell it. You can't trade it. It's bound to your wallet — your "soul," if you want to get philosophical about it.
+
+Why does this matter? Because it keeps the proof honest.
+
+If Attendance NFTs were transferable, someone could buy one from an attendee and claim they were at the event. Or someone could collect them as speculative assets. That defeats the whole purpose. The Attendance NFT is supposed to prove *you* were there, not that you bought proof from someone who was.
+
+Soulbound makes the proof credible. When someone's wallet has a soulbound Attendance NFT for an event, you know they were there. There's no other way they could have gotten it. It was minted directly to their wallet at check-in, and it can't move.
+
+Now, soulbound is optional. The organizer decides at event creation whether Attendance NFTs should be transferable or not. For most use cases — reputation, proof of participation, community credentials — soulbound makes sense. But there might be cases where transferability is fine, like commemorative collectibles where the provenance matters less than the art.
+
+## Minted on check-in
+
+The minting happens automatically when the attendee checks in. Scan your QR, get verified, and the Attendance NFT hits your wallet. No extra steps. No "claim your badge" form to fill out after the event. It just appears.
+
+This is clean because it ties the NFT directly to the verified check-in. The blockchain recorded your attendance, and the Attendance NFT is the visual, holdable representation of that record. They're linked — the NFT references the check-in transaction, and the check-in transaction is what authorized the mint.
+
+No attendance? No NFT. You can't mint one without going through the verification process. The smart contract enforces this.
+
+## On-chain identity
+
+Here's where it gets really interesting. Your Attendance NFTs become part of your on-chain identity.
+
+Over time, as you attend more events, your wallet accumulates a collection of Attendance NFTs. That collection says something about you. It says you're active in certain communities. It says you show up. It says you're engaged.
+
+Other projects and platforms can read your wallet and see your attendance history. This is composable identity — your event participation becomes a building block that other systems can use.
+
+- **DAO governance** — "Only members who attended at least two community events can vote on this proposal." The DAO checks your wallet for Attendance NFTs. Simple.
+- **Gated access** — "This exclusive workshop is only open to people who attended our last conference." Check for the Attendance NFT. Done.
+- **Airdrops** — "We're rewarding our most active community members." Airdrop tokens to wallets that hold specific Attendance NFTs. No application process, no manual verification.
+- **Reputation scores** — protocols that aggregate on-chain activity can factor in Attendance NFTs. Attending real-world events is a strong signal of genuine community involvement.
+
+This is the stuff that makes web3 identity actually useful. Not just a profile picture. Not just a username. Real, verifiable proof of what you've done and where you've been.
+
+## Visual collectibles
+
+Let's not ignore the fun part. Attendance NFTs are collectibles. People like collecting things, especially things tied to experiences they enjoyed.
+
+Each event can design a unique badge. Maybe it's the event's logo. Maybe it's a piece of generative art tied to the event date. Maybe it's a hand-drawn illustration from a local artist. Whatever it is, it's something attendees can look at in their wallet and remember.
+
+Over time, an active community member's wallet becomes a gallery of events they've been to. That's cool. It's a visual resume of participation that lives on-chain.
+
+Some events will lean into this more than others. Music festivals might commission stunning artwork. Developer conferences might keep it minimal and technical. Community meetups might have fun, quirky designs. The flexibility is there for organizers to make the Attendance NFT feel uniquely theirs.
+
+## The bigger picture
+
+Hitu, here's what I want you to see. The Attendance NFT isn't just a nice-to-have. It's the bridge between "you attended an event" and "the entire ecosystem knows you attended an event."
+
+Without it, attendance is a private fact between you and the organizer. With it, attendance becomes a public, verifiable, composable credential. Other platforms can build on it. Other events can gate on it. Communities can reward it.
+
+That's the power of putting proof of presence on-chain. It turns a moment into an asset. Not a financial asset — a reputational one. And in web3, reputation is everything.
+
+<Note>
+**RFP requirement:** "Scanning confirms attendance, triggering mint of an Attendance NFT (soulbound optional)."
+</Note>
+
+<Card title="Cool badge. But what does it actually DO?" icon="arrow-right" href="/features/proof-of-attendance">
+  The Attendance NFT sits in your wallet looking pretty. But six months from now, when a project airdrops tokens to "real community members" and your wallet lights up automatically — that's when you'll understand what it was really for.
+</Card>

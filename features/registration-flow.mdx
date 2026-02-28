@@ -1,0 +1,66 @@
+---
+title: "The registration flow"
+description: "From discovery to ticket — the complete registration experience"
+---
+
+A user finds your event, likes what they see, picks a ticket tier, enters their info, pays — and boom, they have a ticket. Not an email receipt. An actual NFT ticket in their account that they own. The whole flow should feel as fast as Luma but with the permanence of blockchain.
+
+Let's walk through it step by step.
+
+## The journey from discovery to ticket
+
+Here's what the experience looks like from the attendee's perspective:
+
+### 1. Discover the event
+
+The user finds your event — maybe through a shared link, maybe through the platform's event feed, maybe through social media. They land on the event page.
+
+### 2. Check out the event page
+
+They see the cover image, the title, the description, the date, the venue. All of this is pulled from Walrus. It loads fast and looks clean. Nothing here feels different from any other event platform.
+
+### 3. Select a ticket tier
+
+If you've set up multiple tiers — general admission, VIP, early bird — the user picks the one they want. They can see prices, what's included, and how many spots are left. Simple.
+
+### 4. Enter their info and pay
+
+The user fills in whatever registration info you've required — name, email, maybe a few custom questions. Then they pay. Payment can be in SUI, USDC, or other supported tokens. If the event is free, this step is just a confirmation click.
+
+### 5. NFT ticket gets minted
+
+Here's where the magic happens. A transaction fires on Sui. An NFT ticket gets minted directly to the user's address (the one derived from their Google login via ZkLogin). This ticket is theirs. It's on-chain. It's verifiable. It's permanent.
+
+### 6. Confirmation
+
+The user sees a confirmation screen. They get a confirmation message with their ticket details. They can add the event to their calendar. Done.
+
+## What happens on-chain
+
+When someone registers, a few things happen in a single Sui transaction:
+
+- **Payment is processed.** The ticket price (if any) is transferred from the attendee to the organizer's address.
+- **An NFT ticket is minted.** A new ticket object is created on Sui, owned by the attendee. It contains references to the event, the ticket tier, and the registration timestamp.
+- **The event's registration count updates.** The on-chain event object tracks how many tickets have been sold for each tier.
+
+All of this happens in one atomic transaction. Either everything succeeds or nothing does. No half-states. No "payment went through but ticket didn't mint." It all works or it all rolls back.
+
+## Payment options
+
+Attendees can pay with:
+
+- **SUI** — the native token of the Sui network
+- **USDC** — a stablecoin pegged to the US dollar, great for avoiding price volatility
+- **Other supported tokens** — depending on what the organizer enables
+
+For free events, no payment is needed. The user just confirms their registration and the ticket mints.
+
+## The feeling we're going for
+
+Fast. Seamless. Delightful. The user shouldn't feel like they're interacting with a blockchain. They should feel like they just registered for an event — and they happen to now own a verifiable, permanent, tamper-proof ticket.
+
+Think about the best registration experience you've ever had. Now add the guarantee that your ticket can't be faked, can't be revoked without reason, and is genuinely yours. That's what we're building.
+
+<Card title="Not all tickets are created equal" icon="arrow-right" href="/features/tickets-and-pricing">
+  General admission gets you in. VIP gets you backstage. But on this platform, different ticket tiers don't just unlock different perks — they unlock different encrypted content. That's a thing no traditional platform can do.
+</Card>

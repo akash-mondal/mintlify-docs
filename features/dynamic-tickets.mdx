@@ -1,0 +1,51 @@
+---
+title: "Dynamic tickets"
+description: "Tickets that update — status, RSVP, attendance"
+---
+
+Tickets aren't static. An event changes venues? The ticket updates. You RSVP "maybe"? The ticket reflects it. You check in at the door? Your ticket's status changes to "attended." It's a living object.
+
+Most people think of NFTs as static images. You mint it and it stays the same forever. But on Sui, NFTs can change. They're objects, and objects can be mutated. That's incredibly powerful for tickets.
+
+## What can change
+
+Imagine this: you buy a ticket three weeks before an event. Between now and event day, a lot can happen. The ticket should be able to keep up.
+
+- **RSVP status** — Going, maybe, not going. Attendees can update their intention, and the ticket reflects it. Organizers get a real-time headcount without needing a separate RSVP system.
+- **Event details** — The organizer moves the venue? Changes the start time? Adds a new speaker? The ticket's linked metadata can be updated so every holder sees the latest info.
+- **Attendance status** — When you check in at the event, your ticket's status flips from "registered" to "attended." That's now permanently recorded.
+- **Tier upgrades** — Started with a general admission ticket? The organizer can upgrade you to VIP, and the ticket updates to reflect your new access level.
+
+## How updates work on Sui
+
+Here's the simple version. On most blockchains, NFTs are basically frozen once they're created. Changing them is awkward — you'd have to burn the old one and mint a new one, or use some hacky workaround.
+
+Sui is different. Everything on Sui is an object, and objects can be mutated by their owner or by authorized smart contracts. Your ticket is an object. When something needs to change, the smart contract just... updates it. The object keeps the same ID. It keeps the same owner. But its fields change.
+
+Think of it like editing a Google Doc. The document stays the same document — same URL, same sharing permissions. But the content inside changes. That's how Sui objects work. Your ticket is the same ticket, but its status, its metadata, its access level — all of that can evolve.
+
+The smart contract controls *who* can make which updates. The attendee can update their RSVP. The organizer can update event details. The check-in system can update attendance. Nobody can make changes they're not authorized to make.
+
+## Why this matters for events
+
+Events are inherently dynamic. Plans change. People cancel. Venues swap. Start times shift. A static ticket that was minted two weeks ago with outdated info is useless.
+
+With dynamic tickets, the ticket is always current. Open your wallet, look at your ticket, and you see the latest venue, the latest time, your current RSVP status, and whether you've checked in yet.
+
+For organizers, this is huge. They don't need a separate email blast every time something changes. They don't need to worry about people showing up to the old venue. The ticket itself is the source of truth, and it's always up to date.
+
+## A living record
+
+Here's the part I find really cool. Because every update happens on-chain, you get a full history of the ticket's lifecycle. Minted on February 1st. RSVP changed to "going" on February 5th. Venue updated on February 10th. Checked in at 6:47 PM on February 15th.
+
+That history doesn't disappear. It's on Sui, forever. And it's verifiable — anyone can look at the ticket's transaction history and see exactly what happened and when.
+
+This makes dynamic tickets more than just convenient. They're a complete, tamper-proof record of the entire attendee journey. That data is gold for organizers, and it's composable for the broader ecosystem.
+
+<Note>
+**RFP requirement:** "Optional dynamic updates (status, RSVP, attendance)."
+</Note>
+
+<Card title="You own it. So can you sell it?" icon="arrow-right" href="/features/ticket-ownership">
+  Your ticket updates, your ticket is encrypted, your ticket is on-chain. But here's the question nobody asks about traditional tickets: what happens when you can't go? The answer on this platform is completely different.
+</Card>

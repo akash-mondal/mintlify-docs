@@ -1,0 +1,46 @@
+---
+title: "Plugins and skills"
+description: "Supercharge Claude Code for Sui development"
+---
+
+Out of the box, Claude Code is good. With the right plugins, it's incredible for Sui development.
+
+These three skills teach Claude Code everything it needs to know about our stack. Install all of them.
+
+## 1. Sui Stack Plugin
+
+Makes Claude Code understand Sui, Move, and the whole Sui ecosystem.
+
+```bash
+npx skills add https://github.com/anthropics/courses/tree/master/claude_code_skills/sui-stack-claude-code-plugin --skill sui-stack-claude-code-plugin --yes
+```
+
+This teaches Claude Code how to write Move smart contracts, interact with Sui, and use the Sui SDK. It's the big one — install this first.
+
+## 2. Move Code Quality Skill
+
+Ensures your Move code follows best practices.
+
+```bash
+npx skills add https://github.com/anthropics/courses/tree/master/claude_code_skills/move-code-quality-skill --skill move-code-quality-skill --yes
+```
+
+Quality checks for Move code. Catches bugs before they bite. Think of it as a linter that actually understands what your contract is supposed to do.
+
+## 3. Frontend Design Skill
+
+Creates beautiful, distinctive UIs.
+
+```bash
+npx skills add https://github.com/anthropics/courses/tree/master/claude_code_skills/frontend-design-skill --skill frontend-design-skill --yes
+```
+
+When you're ready to build the frontend, this skill helps Claude Code create polished, production-grade UI. Not generic Bootstrap stuff — actual thoughtful design.
+
+---
+
+Run all three install commands in your project directory. They'll be available every time you start Claude Code in that project.
+
+<Card title="What if Claude Code could read the docs so you don't have to?" icon="book-open" href="/toolkit/docs-access">
+  Instead of you copy-pasting documentation into every conversation, there's a way to give Claude Code direct access to the Walrus and Seal docs. It reads them itself, in real time, and gives you answers straight from the source. Two config lines. That's it.
+</Card>

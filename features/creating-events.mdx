@@ -1,0 +1,48 @@
+---
+title: "Creating events"
+description: "How organizers create events with metadata stored on Walrus"
+---
+
+Imagine you're organizing a hackathon. You open the platform, fill in the details — name, description, date, venue, a cover image — and hit publish. That cover image? It's stored on Walrus, not on some company's server. The event metadata? On-chain. Nobody can take it down or change it without your permission.
+
+That's the core idea. You create an event the same way you would on Luma or Eventbrite. But under the hood, everything works differently — and better.
+
+## What gets stored where
+
+When you create an event, two things happen:
+
+1. **Your event metadata goes to Walrus.** Title, description, date and time, venue, cover image — all of it gets bundled into a blob and stored on Walrus. Walrus is decentralized storage. Think of it like a hard drive that nobody owns and everybody can read from. Your data doesn't live on AWS or Google Cloud. It lives on a network of nodes that keep it available and tamper-proof.
+
+2. **An event object gets created on Sui.** This is a small on-chain record that points to your Walrus blob. It says "hey, there's an event, and here's where to find the details." This object lives on the Sui blockchain, which means it's permanent, verifiable, and owned by you.
+
+## You own your event
+
+Here's what ownership actually means. The event object on Sui belongs to your address. You — and only you — can update the description, change the time, or cancel the event. No platform admin can silently edit your listing. No company can delist you because they don't like your content. It's your event. You published it. You control it.
+
+This is a big deal for organizers who've been burned by centralized platforms pulling events or changing terms. On-chain ownership is real ownership.
+
+## The metadata breakdown
+
+Every event includes:
+
+- **Title** — the name of your event
+- **Description** — what it's about, who should come, what to expect
+- **Date and time** — when it starts, when it ends
+- **Venue or location** — physical address or virtual link
+- **Cover image** — the banner that makes people want to click
+
+All of this lives as a Walrus blob. The blob ID gets recorded in the on-chain event object so anyone can look it up and verify the details haven't been tampered with.
+
+## Why this matters
+
+On a traditional platform, the company stores your event data in their database. They can change it, delete it, or lose it. You're trusting them to keep your event alive.
+
+On this platform, your event data is distributed across Walrus and anchored on Sui. It's not going anywhere. And because you own the on-chain object, you're the only one who can make changes. That's the difference between renting space on someone else's platform and actually owning your event.
+
+<Note>
+**RFP requirement:** "Create events with metadata (title, time, image, description) stored on Walrus."
+</Note>
+
+<Card title="The onboarding trick that changes everything" icon="arrow-right" href="/features/zklogin-onboarding">
+  Your event exists on a blockchain. So how does a person with zero crypto experience sign up for it using just their Google account? That's ZkLogin — and it's the reason this platform can actually reach normal people.
+</Card>

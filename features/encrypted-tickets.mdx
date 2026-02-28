@@ -1,0 +1,62 @@
+---
+title: "Encrypted tickets"
+description: "Seal encryption — only you can see your ticket details"
+---
+
+![Only you can read this — encrypted with Seal](/images/encrypted-ticket.png)
+
+Here's where it gets interesting. Your ticket's details — the exact venue address, your personal QR code, the access link to the event site — are all encrypted with Seal. Only YOU can decrypt and see them. Not the platform, not a hacker, not even the organizer's database admin. Just you.
+
+Think about what happens today. You buy a ticket and the platform stores your QR code in their database. If that database gets breached, every attendee's ticket is compromised. Scalpers can grab codes and resell them. Your personal data is just... sitting there.
+
+With Seal encryption, that entire problem disappears.
+
+## What gets encrypted
+
+Not everything on the ticket needs to be secret. The event name, the date, the general description — that's all public. But some fields are sensitive:
+
+- **Event location details** — the exact address, room number, floor, entry instructions. You don't want this floating around publicly, especially for private or exclusive events.
+- **Personal QR code** — this is your entry pass. If someone else gets it, they get in instead of you. It needs to be locked down.
+- **Access links** — virtual event links, backstage URLs, VIP area codes. Anything that grants access to something.
+
+These fields are encrypted and stored in the Walrus blob alongside the public metadata. Same blob, but the sensitive parts are locked.
+
+## How Seal encryption works
+
+Okay, I'll keep this simple because the cryptography behind it is intense. Here's what you need to know:
+
+Seal is an encryption system built for Sui. When a ticket is minted, the sensitive metadata fields get encrypted using Seal. The encryption is tied to the NFT itself — specifically, to the ownership of that NFT on Sui.
+
+Only the current holder of the NFT can decrypt the data. That's it. That's the rule.
+
+So when you open your ticket in the app, here's what happens:
+1. The app sees you own the NFT (your wallet proves it).
+2. It fetches the Walrus blob with the ticket metadata.
+3. It uses Seal to decrypt the encrypted fields — because you're the rightful owner.
+4. You see your QR code, the venue address, and the access link.
+
+If anyone else tries to read that blob, they just see encrypted gibberish. They can see the public fields (event name, date), but the private stuff? Locked.
+
+## Why this matters
+
+**Privacy by default.** You don't have to trust the platform to keep your data safe. The encryption is baked into the architecture. Even if someone dumps the entire Walrus blob to the public, the sensitive fields are still encrypted. Useless to attackers.
+
+**No data breaches of ticket info.** Traditional platforms store millions of QR codes in a single database. One breach and every ticket is exposed. With Seal, each ticket's sensitive data is individually encrypted to its owner. There's no central honeypot to attack.
+
+**Ownership = access.** This is elegant. You don't need a separate login, a separate password, a separate "verify your identity" flow. If you own the NFT, you can see the details. Transfer the NFT to someone else? Now *they* can decrypt it and you can't. Ownership and access are the same thing.
+
+**Organizer can't peek either.** This is a subtle but important point. The organizer published the encrypted data, but even they can't decrypt another holder's ticket details after minting. The encryption is between the data and the NFT holder. Nobody else is in that loop.
+
+## The bigger picture
+
+Imagine this: you buy a ticket to an exclusive event. The venue address isn't announced publicly — it's only revealed to ticket holders, encrypted right into their NFT. No leaks. No screenshots of an email getting shared on Twitter. The only way to know where the event is? Own a ticket.
+
+That's the kind of experience you can build with Seal. Privacy isn't just a checkbox. It's a feature that enables entirely new types of events.
+
+<Note>
+**RFP requirement:** "Ticket blob includes encrypted metadata (event location, QR code, access link) locked via Seal. Only the rightful holder can decrypt and view details."
+</Note>
+
+<Card title="But what happens when the event changes?" icon="arrow-right" href="/features/dynamic-tickets">
+  Venue moved. Start time shifted. You RSVP'd "maybe" and changed your mind. Most NFTs are frozen forever — but your ticket isn't most NFTs. It's alive.
+</Card>

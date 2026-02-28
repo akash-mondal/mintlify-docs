@@ -1,0 +1,74 @@
+---
+title: "Approval flows"
+description: "Limited capacity events, waitlists, and manual approvals"
+---
+
+Some events are exclusive. Limited to 50 people. By invitation only. Your platform needs an approval flow where organizers can review and accept registrations manually before tickets are issued.
+
+Not every event is open to everyone. And that's fine. The platform handles it.
+
+## How approval works
+
+When an organizer creates an event, they can toggle on the approval flow. Here's what changes:
+
+1. **User registers as usual.** They find the event, fill in their info, and submit. But instead of getting a ticket immediately, they get a "Registration submitted" confirmation. Their status: pending.
+
+2. **Organizer reviews the registration.** The organizer sees a list of pending registrations in their dashboard. They can see each applicant's info — name, email, answers to any custom questions.
+
+3. **Organizer approves or rejects.** For each registration, the organizer can approve or reject. It's a simple accept/decline decision.
+
+4. **Approved users get their tickets.** Once approved, the NFT ticket mints to the user's address. They get a confirmation. They're in.
+
+5. **Rejected users get notified.** If rejected, the user is notified. No ticket is minted. If they paid upfront, they get refunded.
+
+The key difference: tickets don't mint until the organizer says so. The organizer is the gatekeeper.
+
+## Waitlists
+
+What happens when an event hits capacity but people still want in? That's where waitlists come in.
+
+- **Automatic waitlisting.** When a ticket tier sells out, new registrations go to a waitlist instead of being turned away.
+- **Queue position.** Waitlisted users know where they stand. First come, first served.
+- **Automatic promotion.** If someone cancels or the organizer adds capacity, the next person on the waitlist gets promoted. They get notified and their ticket mints.
+
+Waitlists keep demand visible. If an organizer sees 200 people on the waitlist for a 50-person event, that's a signal. Maybe they should find a bigger venue. Maybe they should add another date. The data is valuable.
+
+## The organizer dashboard
+
+Organizers get a clean view of all pending, approved, and rejected registrations. They can:
+
+- **Filter and search** — find specific registrations by name, email, or custom field
+- **Bulk approve** — select multiple registrations and approve them all at once
+- **Export data** — download registration info for their records
+- **View waitlist** — see who's waiting and manually promote if needed
+
+The dashboard is designed to make this fast. If you've got 200 applications for a 50-person dinner, you need to be able to move through them quickly.
+
+## When to use approval flows
+
+Approval flows make sense for:
+
+- **Exclusive events** — invite-only dinners, private workshops, curated gatherings
+- **Limited capacity** — when you have more demand than seats
+- **Quality control** — when the organizer wants to ensure the right audience (speaker events, industry meetups)
+- **Sensitive events** — when attendees need to be vetted for safety or compliance reasons
+
+For open events like public meetups or conferences, you probably don't need this. Just let people register and get their tickets instantly. But for anything exclusive or limited, the approval flow gives organizers the control they need.
+
+## How this works on-chain
+
+Here's the technical bit, kept simple. When approval is required:
+
+- The registration creates a pending record on-chain. No ticket is minted yet.
+- When the organizer approves, a transaction fires that mints the NFT ticket to the attendee's address.
+- When the organizer rejects, the pending record is updated and any payment is refunded.
+
+The approval decision is the organizer's. The blockchain just executes it faithfully. No middleman, no delay, no ambiguity.
+
+<Note>
+**RFP requirement:** "Optional approval flow for limited-capacity events."
+</Note>
+
+<Card title="Wait — what IS the ticket, exactly?" icon="arrow-right" href="/features/nft-tickets">
+  We keep saying "NFT ticket" like it's obvious. But the difference between a PDF in your email and an object you actually own on-chain? That difference breaks the entire ticketing industry wide open.
+</Card>

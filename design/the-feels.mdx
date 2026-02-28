@@ -1,0 +1,112 @@
+---
+title: "The feels"
+description: "The moments that matter — micro-interactions, transitions, delight"
+---
+
+The difference between an app people USE and an app people LOVE is in the details.
+
+Not the layout. Not the color palette. Not the feature list. The details. The tiny moments between the big moments. The animation when something succeeds. The way a card flips. The sound (or silence) when a ticket mints. The thing that makes someone pause and think "that was nice."
+
+This is where your personality as a designer shows. The screens are the skeleton. The feels are the soul.
+
+## Ticket minting moment
+
+Someone just bought a ticket. A real, on-chain, NFT ticket. This is a BIG moment. What does it feel like?
+
+Does confetti explode across the screen? Does the ticket card glow and pulse before settling into place? Is there a satisfying animation — something physical, like a stamp pressing down or a seal being applied? Does a subtle sound play?
+
+Or is it quiet and elegant — a smooth fade-in, a gentle checkmark, a sense of calm confidence?
+
+Either approach works. A dozen other approaches work too. The wrong answer is making it feel like nothing. The wrong answer is a generic "Success!" alert. This moment is the entire value proposition of your platform compressed into two seconds. Make it count.
+
+## Blockchain loading states
+
+Here's a design challenge unique to what you're building: blockchain transactions take a moment. Not long — Sui is fast, usually sub-second — but there IS a gap between "user clicked the button" and "transaction confirmed on-chain."
+
+What happens in that gap?
+
+A boring spinner is the easy answer. But it's a wasted opportunity. This is a moment where you can educate, entertain, or delight.
+
+Some ideas to get your brain going (not prescriptions — provocations):
+
+- A visual representation of the transaction moving through the network
+- A playful message that rotates: "Talking to the blockchain..." / "Almost there..." / "Your ticket is being forged..."
+- A progress animation that feels tactile and satisfying, even if the actual timing is unpredictable
+- Something brand-specific that only YOUR platform would show
+
+<Note>
+The best loading states don't feel like waiting. They feel like anticipation. Think about the difference between staring at a spinning wheel and watching a package tracker move across a map. Same wait time. Completely different experience.
+</Note>
+
+## The QR scan moment
+
+Event day. An attendee walks up to the door, opens the app, shows their QR code. The organizer scans it.
+
+What happens next?
+
+This is a two-sided moment — the attendee sees something AND the scanner sees something. Both need to feel right.
+
+For the scanner: instant feedback. Green means go. The attendee's name pops up. Maybe their ticket tier. Maybe a photo. The organizer needs absolute confidence in one glance that this person is legit. Speed matters here — when there's a line, you need to scan and move.
+
+For the attendee: the satisfying confirmation. The "you're in" moment. This is the payoff for everything that came before — the browsing, the registering, the paying, the waiting. Make it feel like arrival, not like a transaction.
+
+## Attendance badge reveal
+
+After the event, the attendee receives a proof-of-attendance NFT. A permanent badge. A credential that lives in their profile forever.
+
+How does it reveal itself?
+
+A dramatic unveil — the badge hidden behind a blur that slowly sharpens? A card flip, backside first, then rotating to show the design? A gentle fade-in with a message about what this badge represents? A celebration animation that matches the energy of the event itself?
+
+This is a moment of recognition. The platform is saying "you were there, and here's the proof." It should feel meaningful, not transactional. Not just "badge added to your profile." Something more.
+
+## Empty states
+
+Here's one most people skip — and it's where thoughtful design really separates itself.
+
+What does the organizer dashboard look like when they have zero events? What does an attendee's profile look like when they have zero tickets?
+
+These screens are the first thing new users see. If the empty state feels barren and depressing, the user feels like they're in the wrong place. If the empty state feels welcoming and motivating, it becomes an invitation.
+
+"You haven't created any events yet" is a statement. "Your first event is going to be amazing — let's set it up" is a nudge. Same screen. Different energy.
+
+<Tip>
+Empty states are opportunities, not problems. They're your chance to guide a new user toward their first action. The best empty states make the next step obvious and exciting.
+</Tip>
+
+## Transitions and flow
+
+How does the platform move? When you navigate from the event list to an event detail page, what happens? A hard cut? A smooth slide? A zoom-in on the card that transitions into the full page?
+
+When a modal opens — does it fade in? Slide up from the bottom? Scale up from the center?
+
+When a form submits — does the button change state? Does it show a micro-animation? Does the page transition smoothly to the next step or does it jump?
+
+None of these are make-or-break individually. But together, they define whether your platform feels polished or patched together. Smooth, intentional transitions tell the user that someone cared about every pixel. Janky, inconsistent transitions tell the user the opposite.
+
+The key word is **intentional**. Every transition should feel like you chose it, not like it happened by default.
+
+---
+
+## Make them yours
+
+These moments are where you get to be creative. Where your taste, your personality, and your point of view come through. The screens define what the platform does. The feels define what it's like to use it.
+
+Nobody remembers that Stripe has a payment form. Everybody remembers the rainbow gradient animation that plays when a payment succeeds. That's the power of a well-crafted moment.
+
+Make yours memorable. Make them yours.
+
+---
+
+You now know what the platform looks like, what it does, and how the technology behind it works. You've seen the landscape, collected your inspiration, mapped every screen, and thought about the moments that matter.
+
+Time to get your tools set up and start building.
+
+<Card
+  title="You've designed it. Now meet the thing that builds it for you."
+  icon="arrow-right"
+  href="/toolkit/claude-code"
+  horizontal
+>
+  There's an AI that lives in your terminal, writes Move smart contracts, builds React components, and debugs your code in real time. You describe what you want in plain English. It writes the code. And with the right plugins, it already knows everything about Sui, Walrus, and Seal.
+</Card>

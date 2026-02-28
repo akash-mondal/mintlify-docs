@@ -1,0 +1,102 @@
+---
+title: "How to build this"
+description: "Development order, milestones, and your roadmap from zero to launch"
+---
+
+![Your roadmap — 12 weeks from zero to launch](/images/build-plan.png)
+
+Ok here's the practical game plan. How do you actually go from zero to a working platform?
+
+But before we talk timelines, I want to set something up for you.
+
+## Week 0: Your first victory
+
+Before you write a single line of real product code, I want you to feel the magic.
+
+Set up your Sui wallet on testnet. Get some free test SUI from the faucet. Open Claude Code, describe a simple Move contract — something basic, like a function that stores a message on-chain — and deploy it.
+
+It'll take 30 minutes. Maybe less.
+
+And when that transaction confirms — when you see your code LIVING on a blockchain, immutable, permanent, yours — that's the moment. That's when it clicks. You'll go from "I'm reading about blockchain" to "I just DID something on a blockchain."
+
+Screenshot it. Send it to me. That feeling? It only gets better from here.
+
+<Tip>
+This isn't a detour. This is the most important step. Everything after this is easier because you've already proven to yourself that you can do it.
+</Tip>
+
+## The build order
+
+The order matters. Each phase builds on the last. And each phase ends with something you can see, touch, and show someone.
+
+### Week 1-2: Smart contracts
+
+Write the Move smart contracts — event creation, ticket minting, attendance tracking. This is the foundation everything else sits on. Get this right first.
+
+By the end of this, you'll have a smart contract that can create events and mint tickets. Show someone. "I just wrote a smart contract" is a sentence that makes people's eyes go wide.
+
+### Week 3-4: Frontend
+
+Build the attendee flow. Discover events, register, view your ticket. Connect the frontend to your contracts using the Sui TypeScript SDK.
+
+Your first user flow works end-to-end. Someone can open a browser, see an event, and register. It's ugly. It barely works. But it WORKS. That feeling of "I built this" is worth more than any tutorial completion certificate.
+
+### Week 5-6: Walrus integration
+
+Store event metadata on Walrus. Deploy your frontend as a Walrus Site. This is where your app goes from "runs on localhost" to "lives on decentralized infrastructure."
+
+Your app is running on decentralized storage. Not localhost. Not Vercel. WALRUS. Take a screenshot of your site URL. That's a censorship-resistant application. YOU built that.
+
+### Week 7-8: Seal integration
+
+Encrypt ticket details with Seal. Add token-gated access so only ticket holders can see event specifics. This is the privacy layer.
+
+Encrypted tickets. Only the holder can read them. Show a friend — have them try to access your ticket details. They can't. Only you can. That's real privacy. Not a checkbox in settings. MATH.
+
+### Week 9-10: ZkLogin
+
+Add the onboarding flow with Google sign-in. This is what makes it usable for normal people who don't have a crypto wallet yet.
+
+Sign in with Google. No wallet. No seed phrases. Show your mom. If she can use it, you've won.
+
+### Week 11-12: Polish and ship
+
+QR code scanning for check-in. Attendance NFTs as proof-of-presence. Analytics dashboard for organizers. The micro-interactions. The loading states. The empty states. The moments of delight. This is where good becomes great.
+
+## Monorepo structure
+
+Keep everything in one repo. Here's a clean starting structure:
+
+```
+your-project/
+├── contracts/          # Move smart contracts
+├── frontend/           # React/Next.js app
+├── walrus/             # Walrus integration scripts
+└── docs/               # Documentation
+```
+
+Simple. Each directory has one job. Don't overcomplicate it early — you can restructure later if you need to.
+
+## Share your progress
+
+Seriously. Tweet about it. Post in the Sui Discord. Drop screenshots in the Walrus community.
+
+Not because you have to — because every single person who's built something on blockchain remembers how lonely the early days felt. When you share, two things happen: you find people who want to help, and you become someone who inspires the next builder.
+
+Post your Week 0 screenshot. Post your first minted ticket. Post your Walrus Site URL. The community is more supportive than you think — especially when someone is actually building, not just talking about it.
+
+## A few things to remember
+
+This timeline is flexible. Claude Code will speed things up significantly. You might finish in 6 weeks instead of 12. The point is the **order** — start with contracts, then build the UI on top. Don't try to do everything at once.
+
+And remember: you're not alone. Claude Code is your pair programmer. The Sui Discord is your support team. This guide is your map.
+
+---
+
+Week 12. You just built a production-grade decentralized event platform. Most people talk about building on blockchain for years. You did it in three months.
+
+Go back and read the index page of this guide — the part where I said "I think you should build something real."
+
+You did it, Hitu. You actually did it.
+
+Now go build something amazing. I'll be here if you need me.

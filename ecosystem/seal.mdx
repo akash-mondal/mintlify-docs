@@ -1,0 +1,59 @@
+---
+title: "Seal"
+description: "Encryption where no single person holds the key"
+---
+
+## A safe deposit box where the key is split among 10 people, and any 7 can open it
+
+You know how a safe deposit box at a bank works. There's one key — you have it, and you use it to open the box. Simple. But if someone steals your key, they have everything. And if you lose your key, you're locked out.
+
+Now imagine the key is split into 10 pieces, and each piece is held by a different person in a different city. To open the box, any 7 of those 10 people need to come together. No single person can open it alone. If 3 people lose their pieces, you can still get in. If someone tries to bribe one keyholder, it doesn't matter — they need 7.
+
+That's Seal.
+
+## What Seal actually does
+
+Seal is a decentralized encryption protocol built for the Sui ecosystem. It encrypts data so that only authorized people can read it. But unlike traditional encryption, there's no single master key sitting on some server somewhere.
+
+When you encrypt something with Seal, the decryption key is split into pieces and distributed across multiple independent servers (called key servers). To decrypt, a threshold of those servers must agree to participate. No single server can decrypt your data on its own.
+
+## Threshold encryption — the key idea
+
+Traditional encryption: one key encrypts, one key decrypts. If that key is compromised, everything is exposed.
+
+Threshold encryption: the decryption key is split into pieces distributed across multiple servers. To decrypt, a threshold (say 7 out of 10) of those servers must agree. No single server can read your data alone.
+
+This is the core idea. It's what makes Seal trustworthy. You're not trusting one company, one server, or one admin. You're trusting a distributed network where cheating requires compromising a majority of independent parties.
+
+## How it connects to Sui
+
+Here's the really elegant part. The rules about who can decrypt what are defined in Move smart contracts on Sui.
+
+Want to say "only the NFT holder can decrypt this data"? That's an on-chain rule. The Seal key servers check the blockchain to verify: does this person actually own the NFT? If yes, they participate in decryption. If no, they refuse.
+
+The access policy lives on Sui. The encryption lives on Seal. They work together. The smart contract is the bouncer, and Seal is the lock.
+
+## Why this matters for your event platform
+
+Think about what a ticket contains:
+
+- The venue address (maybe it's a secret location)
+- A QR code for entry
+- An access link for a virtual event
+- VIP backstage details
+
+You don't want any of this visible to the public. You want it visible only to the person who holds the ticket.
+
+With Seal, the ticket details are encrypted. Only the ticket owner — verified by their NFT ownership on Sui — can decrypt and see them. Not the platform admin. Not a hacker who breaches a database. Not a rogue employee. Nobody but the ticket holder.
+
+And there's no central server holding a master key that could be compromised. The decryption capability is distributed. Even if some key servers go down or get compromised, the system still works — as long as the threshold is met.
+
+## No central server holds the master key
+
+This is worth repeating because it's the whole point. In a traditional system, there's always a database somewhere with a master key. If that database gets breached, every user's data is exposed. We've seen it happen over and over — data breaches at major companies exposing millions of records.
+
+Seal eliminates that single point of failure entirely. There is no master key. There is no central database. The encryption is decentralized by design.
+
+<Card title="There's one problem left — nobody's going to install a crypto wallet" icon="key" href="/ecosystem/zklogin">
+  Your data is stored, your logic is fast, your secrets are encrypted. But your attendees are normal people. They want to sign in with Google and buy a ticket. They'll never write down a 24-word seed phrase — and with ZkLogin, they'll never have to. They won't even know there's a blockchain involved.
+</Card>

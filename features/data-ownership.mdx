@@ -1,0 +1,50 @@
+---
+title: "Data ownership"
+description: "Users control their data — delete, revoke, but proofs stay"
+---
+
+Here's the fundamental shift: users control their data. They can delete their Walrus-stored blobs. They can revoke access to their encrypted content. But their on-chain proofs — that they registered, that they attended — those stay intact. Deletion of personal data doesn't erase the fact that they participated.
+
+This distinction matters more than almost anything else in the system, Hitu. Let me break it down.
+
+## Users retain control
+
+In a traditional platform, your data lives on someone else's server. You're at their mercy. They decide what you can access, what you can delete, what they share with third parties. You click "delete my account" and hope for the best.
+
+Here, you actually own your data. Your encrypted blobs on Walrus — your ticket details, your personal information, whatever you stored — that's yours. You hold the keys. Literally. Nobody can access it without your permission, and you can revoke that permission whenever you want.
+
+## Delete and revoke
+
+Want to delete your personal data from Walrus? Do it. Your encrypted blobs, your stored content — you can remove them. Want to revoke access you previously granted to an organizer or a third party? Done. You're not filing a support ticket and waiting three business days. You're exercising control that's built into the system.
+
+This is what real data ownership looks like. Not a promise in a privacy policy. Actual, enforceable, technical control.
+
+## On-chain proofs remain intact
+
+Here's the nuance, and it's important. You can delete your personal data, but the on-chain proof that you participated doesn't go away. The blockchain still shows that your wallet registered for the event. It still shows that you checked in. The proof of attendance remains.
+
+Think of it like this: you can shred your concert ticket stub, but the venue's records still show someone with your ticket number walked through the door. You're removing your personal copy, not rewriting history.
+
+This is by design. The integrity of the event record depends on these proofs being permanent. An organizer needs to know their attendance count is accurate. Other systems building on attendance data need to trust it hasn't been retroactively altered.
+
+## GDPR-friendly design
+
+This is where it gets elegant. GDPR gives people the right to be forgotten — to have their personal data deleted. Traditional blockchain systems struggle with this because everything on-chain is permanent. But this architecture handles it cleanly.
+
+Personal data — your name, your email, your encrypted details — lives on Walrus and can be deleted. Participation proofs — the fact that a wallet address registered and attended — live on-chain and stay permanent. You satisfy the right to be forgotten for personal information while maintaining the integrity of the event record.
+
+No contradictions. No compromises. Both goals achieved.
+
+## The distinction that matters
+
+Personal data is deletable. Participation proofs are permanent. That's the line. Everything on the personal data side — your profile info, your ticket details, your encrypted content — you control completely. Everything on the proof side — registration records, attendance verification, transaction history — stays on-chain forever.
+
+Once you understand this distinction, the whole system clicks into place. Users get real privacy and real control. The network gets reliable, tamper-proof records. Nobody has to choose between the two.
+
+<Note>
+**RFP requirement:** Users retain control over their Walrus-stored data and may delete or revoke access to their encrypted blobs while on-chain proofs remain intact.
+</Note>
+
+<Card title="One more thing organizers have been begging for" icon="address-card" href="/features/lead-capture">
+  Users own their data. They can delete it. But sponsors still need leads and organizers still need contacts. There's a way to make both sides happy — and it involves the attendee choosing to share, not the platform choosing for them.
+</Card>

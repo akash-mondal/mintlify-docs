@@ -1,0 +1,74 @@
+---
+title: "NFT tickets"
+description: "Your ticket is an NFT you actually own"
+---
+
+![This is yours — not a database row, not a PDF](/images/nft-ticket-hero.png)
+
+Your ticket isn't a PDF in your email. It's an NFT on Sui — a digital object that you actually own. It has your event info, your access details, and a unique identity. Nobody can duplicate it. Nobody can take it away. If you want to transfer it to a friend, you just... transfer it. No "contact support" nonsense.
+
+Let that sink in for a second. Every ticket to every event you've ever been to was a row in someone else's database. You didn't own it. You had *permission* to use it, and that permission could be revoked at any time. NFT tickets flip that completely.
+
+## How it works
+
+When someone registers for an event on your platform, a ticket NFT gets minted on Sui. This is a real on-chain object — it belongs to the attendee's address, and only they can do anything with it.
+
+But here's the thing: the NFT itself is lightweight. It doesn't store a giant image or a wall of text on-chain. Instead, it's linked to a Walrus blob that holds the full ticket metadata.
+
+## What lives where
+
+Think of it like this:
+
+**The NFT on Sui contains:**
+- A unique ticket ID
+- The event it belongs to
+- The owner's address
+- A pointer (blob ID) to the full metadata on Walrus
+
+**The Walrus blob contains:**
+- Event name, date, venue
+- Ticket tier and pricing info
+- The cover image or ticket artwork
+- Encrypted fields (we'll get to that next)
+
+The NFT is the proof of ownership. The blob is the content. They're linked together, and you need both. The NFT says "this person has a valid ticket." The blob says "here's everything about that ticket."
+
+## True ownership
+
+This is the part that matters most. When you own an NFT ticket:
+
+- **You can transfer it.** Want to give it to a friend? Send it to their address. Done. No platform approval needed.
+- **You can prove it's real.** Anyone can verify on-chain that your ticket was minted by the official event organizer. No counterfeits.
+- **Nobody can take it from you.** The platform can't revoke your ticket on a whim. It's yours. It's in your wallet.
+- **It can't be duplicated.** Every NFT is unique. There's no way to screenshot it and sneak in — the blockchain knows there's only one.
+
+This is a massive shift from how ticketing works today. Right now, Ticketmaster can cancel your tickets, revoke your transfer, or change the terms after you've paid. With NFT tickets, the power is in the holder's hands.
+
+## This already exists
+
+I'm not making this up. NFT ticketing is real, and people are already using it. Go check these out:
+
+- [Seatlab](https://www.seatlabnft.com/) — NFT ticketing platform, clean UX, already doing events. Go click around their site.
+- [SI Tickets](https://boxoffice.sitickets.com/) — Sports Illustrated's NFT ticketing platform. Yes, *Sports Illustrated*.
+
+And there's [YellowHeart](https://johncheung.design/project/yellowheart-app) — they've onboarded 27,000 users and minted 70,000 NFTs, nearly 10,000 of which are event tickets. Their tickets aren't just QR codes — they're "living" video assets that change color when scanned at the venue. After the event, fans keep the NFT as a collectible. Oh, and guess who invested in YellowHeart? Live Nation. Even the monopoly sees where this is heading.
+
+These exist already. Go click around them. Look at how they present tickets, how transfers work, how the experience feels. You're building something similar, but on Walrus and Sui — with encrypted metadata and decentralized storage that these platforms don't have.
+
+<Tip>
+Go explore [YellowHeart's design case study](https://johncheung.design/project/yellowheart-app) — it shows real UX decisions around NFT ticketing. Great inspiration for your own design.
+</Tip>
+
+## Why Sui is perfect for this
+
+Sui's object model is basically made for NFTs. Every object on Sui has an owner, and ownership is enforced at the protocol level. You don't need a smart contract to say "this NFT belongs to Alice." Sui just *knows*. That means transfers are fast, cheap, and native. No weird approval flows or gas wars.
+
+And because Walrus is the storage layer, your ticket metadata isn't sitting on some centralized CDN that goes down. It's distributed across a decentralized network. The ticket data is as permanent and available as the blockchain itself.
+
+<Note>
+**RFP requirement:** "Ticket NFTs minted on Sui and linked to a Walrus blob."
+</Note>
+
+<Card title="Your ticket is an NFT. But what's INSIDE it?" icon="arrow-right" href="/features/encrypted-tickets">
+  The NFT proves you own it. But the venue address, your QR code, the backstage link — that's all hidden inside, encrypted so that only you can see it. And the way Seal pulls that off is wild.
+</Card>
