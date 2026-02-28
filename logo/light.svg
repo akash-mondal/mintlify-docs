@@ -1,5 +1,11 @@
-<svg width="200" height="28" viewBox="0 0 200 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="28" height="28" rx="7" fill="#E91E8C"/>
-<text x="14" y="20.5" font-family="system-ui, -apple-system, sans-serif" font-size="17" font-weight="700" fill="white" text-anchor="middle">H</text>
-<text x="36" y="20" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#1a1a2e" letter-spacing="-0.3">Hitu's Build Guide</text>
+<svg width="210" height="30" viewBox="0 0 210 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <linearGradient id="badge-light" x1="0" y1="0" x2="30" y2="30" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#DB2777"/>
+    <stop offset="1" stop-color="#BE185D"/>
+  </linearGradient>
+</defs>
+<rect width="30" height="30" rx="8" fill="url(#badge-light)"/>
+<text x="15" y="21.5" font-family="system-ui, -apple-system, sans-serif" font-size="17" font-weight="700" fill="white" text-anchor="middle">H</text>
+<text x="40" y="21" font-family="Outfit, system-ui, sans-serif" font-size="17" font-weight="600" fill="#1a1a2e" letter-spacing="-0.2">Hitu's Build Guide</text>
 </svg>

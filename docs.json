@@ -1,13 +1,49 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "maple",
-  "name": "Build Guide — Event Registration on Walrus",
+  "name": "Hitu's Build Guide",
   "colors": {
-    "primary": "#E91E8C",
-    "light": "#F9A8D4",
-    "dark": "#9D174D"
+    "primary": "#DB2777",
+    "light": "#F472B6",
+    "dark": "#BE185D"
+  },
+  "appearance": {
+    "default": "dark"
+  },
+  "background": {
+    "decoration": "gradient",
+    "color": {
+      "light": "#FFFBFC",
+      "dark": "#110710"
+    }
+  },
+  "fonts": {
+    "heading": {
+      "family": "Outfit",
+      "weight": 600
+    },
+    "body": {
+      "family": "Plus Jakarta Sans",
+      "weight": 400
+    }
+  },
+  "styling": {
+    "codeblocks": {
+      "light": "rose-pine-dawn",
+      "dark": "rose-pine"
+    }
   },
   "favicon": "/favicon.svg",
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
+  "search": {
+    "prompt": "Search the guide..."
+  },
+  "thumbnails": {
+    "appearance": "dark"
+  },
   "navigation": {
     "tabs": [
       {
@@ -170,24 +206,32 @@
         {
           "anchor": "Walrus Docs",
           "href": "https://docs.wal.app",
-          "icon": "book-open-cover"
+          "icon": "book-open-cover",
+          "color": {
+            "light": "#DB2777",
+            "dark": "#F472B6"
+          }
         },
         {
           "anchor": "Sui Docs",
           "href": "https://docs.sui.io",
-          "icon": "book"
+          "icon": "book",
+          "color": {
+            "light": "#BE185D",
+            "dark": "#DB2777"
+          }
         },
         {
           "anchor": "Walrus RFP",
           "href": "https://rfp.walrus.site",
-          "icon": "file-lines"
+          "icon": "file-lines",
+          "color": {
+            "light": "#9D174D",
+            "dark": "#F472B6"
+          }
         }
       ]
     }
-  },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
   },
   "navbar": {
     "links": [
