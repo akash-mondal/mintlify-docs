@@ -3,9 +3,9 @@
   "theme": "maple",
   "name": "Build Guide — Event Registration on Walrus",
   "colors": {
-    "primary": "#0D9373",
-    "light": "#18E299",
-    "dark": "#15803D"
+    "primary": "#E91E8C",
+    "light": "#F9A8D4",
+    "dark": "#9D174D"
   },
   "favicon": "/favicon.svg",
   "navigation": {
